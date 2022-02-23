@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_item_groups_search" model="ir.ui.view">
+      <field name="name">ayu_product_data.item_group.search</field>
+      <field name="model">ayu_product_data.item_group</field>
+      <field name="arch" type="xml">
+        <search string="Item Group Search">
+          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <field name="identifier"/>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_item_group_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.item_group.form</field>
+      <field name="model">ayu_product_data.item_group</field>
+      <field name="arch" type="xml">
+        <form string="Item Group">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_color="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <group>
+              <group>
+                <field name="identifier"/>
+                <field name="name"/>
+              </group>
+            </group>
+            <notebook>
+              <page name="implied_data" string="Implied Data">
+                <div class="text-muted">Assigning values here, will set them in all related product templates.</div>
+                <group>
+                  <group name="product_data_specs" string="General">
+                    <field name="ayu_line_id"/>
+                    <field name="ayu_color_id"/>
+                    <field name="ayu_material_id"/>
+                    <field name="ayu_condition_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="ayu_country_of_origin_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                  </group>
+                  <group name="product_data_audience" string="Audience / Categories">
+                    <field name="ayu_gender_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="ayu_age_group_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <div colspan="2">
+                      <div style="font-weight: bold;">
+                        <label
+                          for="public_categ_ids"
+                          string='eCommerce Category / Product Type'
+                          style="font-weight: bold; margin: 0px;"/>:
+                      </div>
+                      <field name="public_categ_ids" widget="many2many_tags" nolabel='1'/>
+                      <div style="font-weight: bold;">
+                        <label for="ayu_google_category_id" style="font-weight: bold; margin: 0px;"/>:
+                      </div>
+                      <field
+                        name="ayu_google_category_id"
+                        nolabel='1'
+                        options="{'no_create': True, 'no_create_edit':True}"/>
+                    </div>
+                  </group>
+                </group>
+                <group>
+                  <group name="product_data_details" string="Details">
+                    <field name="ayu_description_id" string="Description" options="{'no_create': True}"/>
+                    <field
+                      name="ayu_product_text_ids"
+                      widget="many2many_tags"
+                      options="{'no_create': True}"/>
+
+                    <label for="custom_detail_ids"/>
+                    <div class="full_badge">
+                      <field
+                        attrs="{'invisible': [('implied_detail_ids','in',[None,False])]}"
+                        name="implied_detail_ids"
+                        widget="many2many_tags"/>
+                      <field
+                        name="custom_detail_ids"
+                        widget="many2many_tags"
+                        domain="[('id','not in',implied_detail_ids)]"/>
+                    </div>
+                    <field name="ayu_product_highlight_ids" widget="many2many_tags"/>
+                  </group>
+                  <group string="Shop">
+                    <field name="tag_category_id" invisible="1"/>
+                    <field
+                      name="tag_ids"
+                      widget="many2many_tags"
+                      options="{'color_field': 'color'}"
+                      context="{'default_category_id': tag_category_id}"/>
+                  </group>
+                </group>
+              </page>
+              <page
+                attrs="{'invisible': [('product_template_ids','=',[])]}"
+                name="product_templates"
+                string="Product Templates">
+                <field name="product_template_ids">
+                  <tree>
+                    <field name="display_name" string="Product Name"/>
+                    <field name="default_code"/>
+                    <field name="ayu_line_id"/>
+                    <field name="ayu_color_id"/>
+                    <field name="ayu_material_id"/>
+                    <field name="ayu_condition_id"/>
+                    <field name="ayu_gender_id"/>
+                    <field name="ayu_age_group_id"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_item_group_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.item_group.tree</field>
+      <field name="model">ayu_product_data.item_group</field>
+      <field name="field_parent">child_ids</field>
+      <field name="arch" type="xml">
+        <tree string="Item Group">
+          <field name="identifier"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_item_group" model="ir.actions.act_window">
+      <field name="name">Item Groups</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.item_group</field>
+      <field name="view_id" ref="view_item_group_tree"/>
+    </record>
+
+    <menuitem
+      id="menu_product_item_group"
+      action="ayu_product_data.action_item_group"
+      name="Item Groups"
+      parent="ayu_product_data.menu_product_data"
+      sequence="4"/>
+    <menuitem
+      id="menu_website_product_item_group"
+      action="ayu_product_data.action_item_group"
+      name="Item Groups"
+      parent="ayu_product_data.menu_website_product_data"
+      sequence="4"/>
+
+  </data>
+</odoo>

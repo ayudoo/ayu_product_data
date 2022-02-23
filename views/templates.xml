@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template
+    id="assets_frontend"
+    inherit_id="website.assets_frontend"
+    name="Ayu Product Data Frontend Assets">
+    <xpath expr="." position="inside">
+      <link
+        rel="stylesheet"
+        type="text/less"
+        href="/ayu_product_data/static/src/scss/frontend.scss"/>
+      <script
+        type="text/javascript"
+        src="/ayu_product_data/static/src/js/product_color_select.js"></script>
+    </xpath>
+  </template>
+
+  <template
+    id="assets_backend"
+    name="ayu_product_data_assets_backend"
+    inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+      <link
+        rel="stylesheet"
+        type="text/scss"
+        href="/ayu_product_data/static/src/scss/backend.scss"/>
+    </xpath>
+  </template>
+
+  <template id="product_text" name="Product Text">
+    <div class="product-text" data-name="Item">
+      <h6>
+        <a
+          t-att-class="'collapsed' if not show else ''"
+          t-attf-href="##{body_id}"
+          data-toggle="collapse"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+          t-esc="product_text.category_id.name"/>
+      </h6>
+      <div
+        t-attf-class="collapse #{'show' if show else ''}"
+        t-att-id='body_id'
+        data-parent="#product_texts">
+        <t t-raw="0"/>
+        <div t-field="product_text.content"/>
+        <br/>
+      </div>
+    </div>
+  </template>
+
+  <template id="product_text_description" name="Product Text Description">
+    <t t-call="ayu_product_data.product_text">
+      <t t-set="show" t-value="True"/>
+      <t t-set="body_id" t-value="'product_text_description'"/>
+    </t>
+  </template>
+
+  <template id="product_related_documents" name="Product Related Documents">
+    <div t-if="related_documents" class="product-text" data-name="Item">
+      <h6>
+        <a
+          t-att-class="'collapsed' if not show else ''"
+          t-attf-href="#product_related_documents"
+          data-toggle="collapse"
+          data-parent="#product_texts"
+          aria-expanded="true"
+          aria-controls="collapseOne">
+          <div>Related Documents</div>
+        </a>
+      </h6>
+      <div
+        t-attf-class="collapse #{'show' if show else ''}"
+        t-attf-id="product_related_documents"
+        data-parent="#product_texts">
+        <div>
+          <ul>
+            <t t-foreach="related_documents" t-as='related_document'>
+              <li>
+                <a t-att-href="related_document.get_website_download_url()" target="_blank">
+                  <span t-esc="related_document.name"></span>
+                  <i class="fa fa-download"></i>
+                </a>
+                <div t-field="related_document.description"/>
+              </li>
+            </t>
+          </ul>
+        </div>
+        <br/>
+      </div>
+    </div>
+  </template>
+
+  <template id="product_texts" name="Product Texts">
+    <div id="product_texts" class="accordion">
+      <t t-if="product.ayu_description_id" t-call="ayu_product_data.product_text_description">
+        <t t-set="product_text" t-value="product.ayu_description_id"/>
+      </t>
+
+      <t t-foreach="product.ayu_product_text_ids" t-as='product_text'>
+        <t t-call="ayu_product_data.product_text">
+          <t t-set="body_id" t-value="'product_text_{}'.format(product_text.id)"/>
+        </t>
+      </t>
+
+      <t t-set="related_documents" t-value="product.get_related_documents()"/>
+      <t t-if="related_documents" t-call="ayu_product_data.product_related_documents"/>
+    </div>
+  </template>
+
+  <template
+    id="show_product_texts"
+    inherit_id="website_sale.product"
+    active="True"
+    customize_show="True"
+    name="Show Product Texts">
+    <xpath expr="//div[@id='product_details']/hr[last()]" position="replace">
+      <t t-call="ayu_product_data.product_texts"/>
+    </xpath>
+  </template>
+
+  <template id="product_color_select" name="Product Color Select">
+    <t
+      t-set="other_products"
+      t-value='product.ayu_item_group_id and product.ayu_item_group_id.website_color_pt_ids'/>
+    <div t-if="other_products" class="ayu-product-color-select">
+      <h6>
+        <div>Color:</div>
+        <span itemprop="color" t-esc="product.ayu_color_id.display_name"/>
+      </h6>
+      <t t-foreach="other_products" t-as="other_product">
+        <t t-set="color" t-value='other_product.ayu_color_id'/>
+        <a
+          itemprop="url"
+          t-att-href="keep('/shop/product/%s' % slug(other_product))"
+          t-attf-class="product-color-btn product-color-select-tooltip #{'active' if product.id == other_product.id else ''}"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          data-delay='{"show":"0"}'
+          title=""
+          t-att-data-original-title="color.display_name"
+          t-att-data-publish="other_product.website_published and 'on' or 'off'">
+          <div
+            t-attf-class="product-color-outer #{'product-color-bright' if color.bright_color else ''}">
+            <div class="product-color-inner">
+              <img
+                t-if="color.color_image"
+                t-attf-src="/web/image/ayu_product_data.color/#{color.id}/color_image"/>
+              <span
+                class='html-color'
+                t-if="not color.color_image and color.html_color"
+                t-attf-style="background-color: #{color.html_color};"/>
+              <span
+                class='html-color'
+                t-if="not color.color_image and not color.html_color"
+                t-attf-style="background-color: grey;"/>
+            </div>
+          </div>
+        </a>
+      </t>
+    </div>
+  </template>
+
+  <template
+    id="show_product_color_select"
+    inherit_id="website_sale.product"
+    active="False"
+    customize_show="True"
+    name="Show Product Color Select">
+    <xpath expr="//div[@id='product_details']//form" position="before">
+      <t t-call="product_color_select"/>
+    </xpath>
+  </template>
+
+  <template id="product_tags" name="Product Tags">
+    <section class="product_tags">
+      <div class="d-flex align-items-center flex-wrap pt-2">
+        <t t-foreach="product.ayu_tag_rel_ids.tag_id" t-as="tag" t-if="tag.show_on_detail_page">
+          <a t-att-href="keep('/shop', tags=tag.id)">
+            <span class="badge mb-2 mr-1 text-truncate border" t-esc="'#' + tag.name"/>
+          </a>
+        </t>
+      </div>
+    </section>
+  </template>
+
+  <template
+    id="show_product_tags"
+    inherit_id="website_sale.product"
+    active="False"
+    customize_show="True"
+    name="Show Product Tags"
+    priority="300">
+    <xpath expr="//div[@id='wrap']" position="inside">
+      <div class="container">
+        <t t-call="ayu_product_data.product_tags"/>
+      </div>
+    </xpath>
+  </template>
+
+</odoo>

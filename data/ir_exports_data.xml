@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <record forcecreate="True" id="default_feed_export" model="ir.exports">
+      <field name="name">Default Poduct Data Feed Export</field>
+      <field name="resource">product.product</field>
+      <field
+        name="export_fields"
+        eval="[
+        (0,0,{'name': 'default_code', 'ayu_data_export_label': 'id'}),
+        (0,0,{'name': 'display_name', 'ayu_data_export_label': 'title'}),
+        (0,0,{'name': 'ayu_description_id/content', 'ayu_data_export_label': 'description'}),
+        (0,0,{'name': 'website_url', 'ayu_data_export_label': 'link'}),
+        (0,0,{'name': 'ayu_image_url', 'ayu_data_export_label': 'image_link'}),
+        (0,0,{'name': 'ayu_feed_availability', 'ayu_data_export_label': 'availability'}),
+        (0,0,{'name': 'price', 'ayu_data_export_label': 'price'}),
+        (0,0,{'name': 'ayu_product_type_text_export', 'ayu_data_export_label': 'product_type'}),
+        (0,0,{'name': 'ayu_google_category_id/identifier', 'ayu_data_export_label': 'google_category'}),
+        (0,0,{'name': 'barcode', 'ayu_data_export_label': 'gtin'}),
+        (0,0,{'name': 'ayu_item_group_id/identifier', 'ayu_data_export_label': 'item_group_id'}),
+        (0,0,{'name': 'ayu_color_id/name', 'ayu_data_export_label': 'color'}),
+        (0,0,{'name': 'ayu_material_id/name', 'ayu_data_export_label': 'material'}),
+        (0,0,{'name': 'product_template_attribute_value_ids/display_name', 'ayu_data_export_label': 'attribute_value'}),
+        (0,0,{'name': 'ayu_condition_id/identifier', 'ayu_data_export_label': 'condition'}),
+        (0,0,{'name': 'ayu_age_group_id/identifier', 'ayu_data_export_label': 'age_group'}),
+        (0,0,{'name': 'ayu_gender_id/identifier', 'ayu_data_export_label': 'gender'}),
+        (0,0,{'name': 'ayu_product_detail_text_export', 'ayu_data_export_label': 'product_detail'}),
+        (0,0,{'name': 'ayu_product_highlight_text_export', 'ayu_data_export_label': 'product_highlight'}),
+        (0,0,{'name': 'company_id/name', 'ayu_data_export_label': 'brand'})
+      ]"/>
+    </record>
+
+  </data>
+</odoo>

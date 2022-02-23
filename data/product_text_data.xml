@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <record
+      forcecreate="True"
+      id="product_text_category_description"
+      model="ayu_product_data.product_text_category">
+      <field name="sequence">1</field>
+      <field name="name">Description</field>
+    </record>
+
+  </data>
+</odoo>

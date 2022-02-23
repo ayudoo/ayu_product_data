@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_conditions_search" model="ir.ui.view">
+      <field name="name">ayu_product_data.condition.search</field>
+      <field name="model">ayu_product_data.condition</field>
+      <field name="arch" type="xml">
+        <search string="Conditions Search">
+          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_condition_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.condition.form</field>
+      <field name="model">ayu_product_data.condition</field>
+      <field name="arch" type="xml">
+        <form string="Condition">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_color="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="identifier"/>
+                <field name="tag_category_id" invisible="1"/>
+                <field
+                  name="tag_ids"
+                  widget="many2many_tags"
+                  options="{'color_field': 'color'}"
+                  context="{'default_category_id': tag_category_id}"/>
+              </group>
+            </group>
+            <notebook>
+              <page
+                attrs="{'invisible': [('item_group_ids','=',[])]}"
+                name="item_groups"
+                string="Item Groups">
+                <field name="item_group_ids" limit="10">
+                  <tree>
+                    <field name="display_name" string="Name"/>
+                    <field name="ayu_line_id"/>
+                    <field name="ayu_color_id"/>
+                    <field name="ayu_material_id"/>
+                    <field name="ayu_gender_id"/>
+                    <field name="ayu_age_group_id"/>
+                  </tree>
+                </field>
+              </page>
+              <page
+                attrs="{'invisible': [('product_template_ids','=',[])]}"
+                name="product_templates"
+                string="Product Templates">
+                <field name="product_template_ids" limit="10">
+                  <tree>
+                    <field name="display_name" string="Product Name"/>
+                    <field name="default_code"/>
+                    <field name="ayu_line_id"/>
+                    <field name="ayu_item_group_id"/>
+                    <field name="ayu_color_id"/>
+                    <field name="ayu_material_id"/>
+                    <field name="ayu_gender_id"/>
+                    <field name="ayu_age_group_id"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_condition_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.condition.tree</field>
+      <field name="model">ayu_product_data.condition</field>
+      <field name="field_parent">child_ids</field>
+      <field name="arch" type="xml">
+        <tree string="Product Condition">
+          <field name="sequence" widget="handle"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_condition" model="ir.actions.act_window">
+      <field name="name">Conditions</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.condition</field>
+      <field name="view_id" ref="view_condition_tree"/>
+    </record>
+
+    <menuitem
+      id="menu_product_condition"
+      action="ayu_product_data.action_condition"
+      name="Conditions"
+      parent="sale.prod_config_main"
+      groups="base.group_no_one"
+      sequence="25"/>
+
+  </data>
+</odoo>

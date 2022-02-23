@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_feed_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.feed.form</field>
+      <field name="model">ayu_product_data.feed</field>
+      <field name="arch" type="xml">
+        <form string="Feed">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_color="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <group>
+              <group>
+                <field name="website_id"/>
+                <field name="name"/>
+                <field name="context_user_id"/>
+                <field name="country_id"/>
+                <field name="availibility_threshold"/>
+              </group>
+            </group>
+            <notebook>
+              <page name="attachments" string="Attachments">
+                <group>
+                  <button
+                    name="action_generate_feed_files"
+                    type="object"
+                    class="oe_link"
+                    icon="fa-refresh"
+                  >Refresh feed export files.</button>
+                </group>
+                <group>
+                  <div class="text-muted">The files are served under '/shop/feed/{filename}'</div>
+                </group>
+                <field name="attachment_ids">
+                  <tree>
+                    <field name="name" invisible="1"/>
+                    <field string="Name" name="datas" filename="name" widget='binary'/>
+                    <field name="file_size"/>
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                  </tree>
+                </field>
+              </page>
+              <page name="export_fields" string="Fields">
+                <group>
+                  <group>
+                    <label for="export_id"/>
+                    <div class="o_row">
+                      <field name="export_id" string="Export Template" options="{'no_open': True, 'no_create': True}" class="oe_inline"/>
+                      <button
+                        name="open_product_product"
+                        type="object"
+                        class="oe_link"
+                      >
+                        <span class="fa fa-external-link" title="Open Products View"> Open products to configure exports</span>
+                      </button>
+                    </div>
+                  </group>
+                </group>
+                <div class="text-muted">Note, that modifying the fields will also modify the selected export. Proceed with caution.</div>
+                <field name="export_fields">
+                  <tree editable="1">
+                    <field name="name" string="Model Field"/>
+                    <field name="ayu_data_export_label"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_feed_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.feed.tree</field>
+      <field name="model">ayu_product_data.feed</field>
+      <field name="arch" type="xml">
+        <tree string="Feed">
+          <field name="name"/>
+          <field name="context_user_id"/>
+          <field name="export_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_feeds" model="ir.actions.act_window">
+      <field name="name">Feeds</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.feed</field>
+      <field name="view_id" ref="view_feed_tree"/>
+    </record>
+
+  </data>
+</odoo>

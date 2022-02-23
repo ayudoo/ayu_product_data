@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <record forcecreate="True"
+      id="tag_category_line"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">1</field>
+      <field name="name">Line</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_color"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">2</field>
+      <field name="name">Color</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_material"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">3</field>
+      <field name="name">Material</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_condition"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">4</field>
+      <field name="name">Condition</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_age_group"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">5</field>
+      <field name="name">Age Group</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_gender"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">6</field>
+      <field name="name">Gender</field>
+    </record>
+    <record
+      forcecreate="True"
+      id="tag_category_detail"
+      model="ayu_product_data.tag_category">
+      <field name="sequence">7</field>
+      <field name="name">Detail</field>
+    </record>
+
+  </data>
+</odoo>

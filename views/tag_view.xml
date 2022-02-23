@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_tags_search" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag.search</field>
+      <field name="model">ayu_product_data.tag</field>
+      <field name="arch" type="xml">
+        <search string="Product Tag Search">
+          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <field name="name"/>
+          <field name="category_id"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_tag_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag.form</field>
+      <field name="model">ayu_product_data.tag</field>
+      <field name="arch" type="xml">
+        <form string="Product Tag">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_tag="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" string="Tag Name"/>
+              <h1>
+                <field name="name" placeholder="Tag Name..."/>
+              </h1>
+              <field name="color" widget="color_picker"/>
+            </div>
+            <group>
+              <group>
+                <field name="category_id" attrs="{'readonly': [('id', '!=', False)]}"/>
+              </group>
+              <group string="Options">
+                <field name="show_on_detail_page"/>
+                <field name="use_as_filter"/>
+              </group>
+            </group>
+            <notebook>
+              <page name="relations" string="Related Product Templates">
+                <group>
+                  <field name="product_template_rel_ids" readonly="1" nolabel="1">
+                    <tree>
+                      <field name="product_template_id"/>
+                      <field name="source_data_ref" widget="refernce" string="Implied From" readonly="1"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_tag_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag.tree</field>
+      <field name="model">ayu_product_data.tag</field>
+      <field name="field_parent">child_ids</field>
+      <field name="arch" type="xml">
+        <tree string="Product Tag">
+          <field name="sequence" widget="handle"/>
+          <field name="name"/>
+          <field name="category_id"/>
+          <field name="use_as_filter"/>
+          <field name="show_on_detail_page"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_tag" model="ir.actions.act_window">
+      <field name="name">Product Tags</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.tag</field>
+      <field name="view_id" ref="view_tag_tree"/>
+    </record>
+
+    <menuitem
+      id="menu_product_tag"
+      action="ayu_product_data.action_tag"
+      name="Tags"
+      parent="ayu_product_data.menu_product_data"
+      sequence="50"/>
+
+    <menuitem
+      id="menu_website_product_tag"
+      action="ayu_product_data.action_tag"
+      name="Tags"
+      parent="ayu_product_data.menu_website_product_data"
+      sequence="50"/>
+
+  </data>
+</odoo>

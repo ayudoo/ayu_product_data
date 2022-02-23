@@ -1,0 +1,17 @@
+.o_field_widget.o_field_many2manytags[name='detail_ids'] .badge .o_badge_text,
+.full_badge .o_field_widget.o_field_many2manytags .badge .o_badge_text {
+  max-width: initial;
+}
+
+div[name='ayu_tag_rel_ids'] table.o_list_table .o_list_button {
+  max-width: 30px !important;
+
+  button {
+    line-height: normal;
+  }
+}
+
+div[name='ayu_prod_doc_rel_ids'] th[data-name="description_plain"] {
+  max-width: initial !important;
+  width: initial !important;
+}

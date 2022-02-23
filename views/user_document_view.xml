@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_user_documents_search" model="ir.ui.view">
+      <field name="name">ayu_product_data.user_document.search</field>
+      <field name="model">ayu_product_data.user_document</field>
+      <field name="arch" type="xml">
+        <search string="User Document Search">
+          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="language_id"/>
+          <!-- <group expand="0" string="Group By"> -->
+          <group string="Group By">
+            <filter
+              string="Language"
+              name="group_by_language"
+              domain="[]"
+              context="{'group_by': 'language_id'}"
+            />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_user_document_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.user_document.form</field>
+      <field name="model">ayu_product_data.user_document</field>
+      <field name="arch" type="xml">
+        <form string="User Document">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_user_document="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="language_id"/>
+                <field name="file" filename="name"/>
+              </group>
+              <field name="description"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_user_document_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.user_document.tree</field>
+      <field name="model">ayu_product_data.user_document</field>
+      <field name="field_parent">child_ids</field>
+      <field name="arch" type="xml">
+        <tree string="User Documents">
+          <field name="name"/>
+          <field name="language_id"/>
+          <field name="description_plain" string="Description"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_user_document" model="ir.actions.act_window">
+      <field name="name">Documents</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.user_document</field>
+      <field name="view_id" ref="view_user_document_tree"/>
+    </record>
+
+    <menuitem
+      id="menu_product_user_document"
+      action="ayu_product_data.action_user_document"
+      name="Documents"
+      parent="ayu_product_data.menu_product_data"
+      sequence="40"/>
+    <menuitem
+      id="menu_website_product_user_document"
+      action="ayu_product_data.action_user_document"
+      name="Documents"
+      parent="ayu_product_data.menu_website_product_data"
+      sequence="40"/>
+
+  </data>
+</odoo>

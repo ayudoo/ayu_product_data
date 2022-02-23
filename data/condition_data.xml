@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+
+    <record forcecreate="True" id="condition_new" model="ayu_product_data.condition">
+      <field name="sequence">1</field>
+      <field name="identifier">new</field>
+      <field name="name">new</field>
+    </record>
+
+    <record
+      forcecreate="True"
+      id="condition_refurbished"
+      model="ayu_product_data.condition">
+      <field name="sequence">2</field>
+      <field name="identifier">refurbished</field>
+      <field name="name">refurbished</field>
+    </record>
+
+    <record forcecreate="True" id="condition_used" model="ayu_product_data.condition">
+      <field name="sequence">3</field>
+      <field name="identifier">used</field>
+      <field name="name">used</field>
+    </record>
+
+  </data>
+</odoo>

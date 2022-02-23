@@ -1,0 +1,93 @@
+$color_image_size: 20px;
+
+#product_details {
+  .ayu-product-color-select {
+    margin-bottom: 5px;
+    margin-left: -2.5px;
+
+    a {
+      margin-bottom: 5px;
+    }
+
+    a,
+    button,
+    h4 {
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+    }
+  }
+
+  #product_texts {
+    h6 {
+      a {
+        display: inline-block;
+        width: 100%;
+
+        div {
+          display: inline-block;
+        }
+      }
+
+      a:after {
+        content: "-";
+        float: right;
+      }
+
+      a.collapsed:after {
+        content: "+";
+      }
+    }
+  }
+}
+
+.ayu-product-color-select {
+  a,
+  button,
+  div {
+    display: inline-block;
+  }
+
+  .product-color-inner {
+    padding: 2px;
+  }
+
+  .product-color-inner,
+  .product-color-outer {
+    border-radius: 50%;
+    font-size: 1px;
+  }
+
+  .product-color-outer {
+    .html-color,
+    img {
+      min-width: $color_image_size;
+      min-height: $color_image_size;
+      width: $color_image_size;
+      height: $color_image_size;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    img {
+      object-fit: cover;
+      background-size: 100% 100%;
+    }
+  }
+
+  .product-color-btn:not(.active) {
+    .product-color-bright .product-color-inner {
+      background: #DDDDDD;
+    }
+
+    .product-color-outer {
+      padding: 2px;
+    }
+  }
+
+  .product-color-btn.active {
+    .product-color-outer {
+      border: 2px solid #333333;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_tag_categorys_search" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag_category.search</field>
+      <field name="model">ayu_product_data.tag_category</field>
+      <field name="arch" type="xml">
+        <search string="Product Tag Search">
+          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <field name="name"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_tag_category_form" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag_category.form</field>
+      <field name="model">ayu_product_data.tag_category</field>
+      <field name="arch" type="xml">
+        <form string="Product Tag Category">
+          <sheet>
+            <div class="oe_button_box" name="button_box"/>
+            <field name="active" invisible="1"/>
+            <widget
+              name="web_ribbon"
+              title="Archived"
+              bg_tag_category="bg-danger"
+              attrs="{'invisible': [('active', '=', True)]}"/>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" string="Category Name"/>
+              <h1>
+                <field name="name" placeholder="Category Name..."/>
+              </h1>
+            </div>
+            <!-- <group>
+              <group string="Options">
+                <field name="use_as_filter"/>
+              </group>
+            </group> -->
+            <notebook>
+              <page
+                name="tags"
+                string="Tags">
+                <field name="tag_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="use_as_filter"/>
+                    <field name="show_on_detail_page"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_tag_category_tree" model="ir.ui.view">
+      <field name="name">ayu_product_data.tag_category.tree</field>
+      <field name="model">ayu_product_data.tag_category</field>
+      <field name="field_parent">child_ids</field>
+      <field name="arch" type="xml">
+        <tree string="Product Tag Category">
+          <field name="sequence" widget="handle"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="action_tag_category" model="ir.actions.act_window">
+      <field name="name">Tag Categories</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ayu_product_data.tag_category</field>
+      <field name="view_id" ref="view_tag_category_tree"/>
+    </record>
+
+    <menuitem
+      id="menu_product_tag_category"
+      action="ayu_product_data.action_tag_category"
+      parent="sale.prod_config_main"
+      groups="base.group_no_one"
+      sequence="25"/>
+
+    <menuitem
+      id="menu_website_product_tag_category"
+      action="ayu_product_data.action_tag_category"
+      parent="website_sale.menu_product_settings"
+      sequence="10"/>
+
+  </data>
+</odoo>

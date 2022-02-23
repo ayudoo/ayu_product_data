@@ -1,0 +1,1736 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ayu_product_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-22 12:48+0000\n"
+"PO-Revision-Date: 2022-02-22 12:48+0000\n"
+"Last-Translator: mj@ayudoo.bg\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ayu_product_data
+#: code:addons/ayu_product_data/models/age_group.py:0
+#: code:addons/ayu_product_data/models/color.py:0
+#: code:addons/ayu_product_data/models/condition.py:0
+#: code:addons/ayu_product_data/models/gender.py:0
+#: code:addons/ayu_product_data/models/google_category.py:0
+#: code:addons/ayu_product_data/models/google_category.py:0
+#: code:addons/ayu_product_data/models/item_group.py:0
+#: code:addons/ayu_product_data/models/line.py:0
+#: code:addons/ayu_product_data/models/material.py:0
+#: code:addons/ayu_product_data/models/product_detail.py:0
+#: code:addons/ayu_product_data/models/product_highlight.py:0
+#: code:addons/ayu_product_data/models/product_text.py:0
+#: code:addons/ayu_product_data/models/product_text.py:0
+#: code:addons/ayu_product_data/models/tags/tag_category.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (Kopie)"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,description:ayu_product_data.age_group_toddler
+msgid ""
+"1-5 years old. Toddler sizes are often identified by the age range in months"
+" (12-24) or years (1-5)."
+msgstr ""
+"1–5 Jahre. Kleinkindergrößen werden oft durch das Alter in Monaten (12–24) "
+"oder Jahren (1–5) angegeben."
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,description:ayu_product_data.age_group_infant
+msgid ""
+"3-12 months old. Infant sizes are often identified by the age range in "
+"months (3-12)."
+msgstr ""
+"3–12 Monate. Säuglingsgrößen werden oft durch das Alter in Monaten (3–12) "
+"angegeben."
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,description:ayu_product_data.age_group_kids
+msgid ""
+"5-13 years old. All sizes within this age group have been manufactured to "
+"fit a child in that age range."
+msgstr ""
+"5–13 Jahre. Kindergrößen werden oft durch das Alter in Jahren (5–13) "
+"angegeben."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid ""
+"<span class=\"fa fa-external-link\" title=\"Open Products View\"> Open "
+"products to configure exports</span>"
+msgstr ""
+"<span class=\"fa fa-external-link\" title=\"Produkt-Ansicht öffnen\"> "
+"Produkte öffnen, um Exporte zu konfigurieren</span>"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_base_mixin__ayu_line_id
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__ayu_line_id
+#: model:ir.model.fields,help:ayu_product_data.field_product_product__ayu_line_id
+#: model:ir.model.fields,help:ayu_product_data.field_product_template__ayu_line_id
+msgid ""
+"A range of similar or similarly themed products with different features and "
+"prices. Not exported in default setting."
+msgstr ""
+"Eine Spanne von ähnlichen oder thematisch ähnlichen Produkten mit "
+"unterschiedlichen Eigenschaften und Preisen. Kein Export in "
+"Standardeinstellungen."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_activation
+msgid "Activate Feed"
+msgstr "Feed aktivieren"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
+msgid "Activate the CSV and XLS Product Data Feed"
+msgstr "Den CSV und XLS Produktdaten-Feed aktivieren"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__active
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__active
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Active"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__website_active
+msgid "Active on Website"
+msgstr "Aktiv auf der Website"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_age_group
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_age_group
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_age_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_age_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_age_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_age_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_age_group_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_tree
+msgid "Age Group"
+msgstr "Altersgruppe"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_age_group
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_age_group
+msgid "Age Groups"
+msgstr "Altersgruppen"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_groups_search
+msgid "Age Groups Search"
+msgstr "Altersgruppensuche"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_detail_ids
+msgid "All Product Details"
+msgstr "Alle Produktdetails"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_groups_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_colors_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_conditions_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_genders_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_categorys_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_groups_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_materials_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_details_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlight_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlights_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_lines_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_categories_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_texts_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_categorys_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tags_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_document_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_documents_search
+msgid "Archived"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__public_categ_ids
+msgid ""
+"Assign categories to this item group to replace the products' categories."
+msgstr ""
+"Produktkategorien zur Artikelgruppe zuweisen und die Kategorien des "
+"Produktes damit ersetzen."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "Assigning values here, will set them in all related product templates."
+msgstr ""
+"Hier zugewiesene Werte ersetzten die Werte auf den verknüpfen "
+"Produktvorlagen."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "Attachments"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__attribute_name
+msgid "Attribute Name"
+msgstr "Attributename"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__attribute_value
+msgid "Attribute Value"
+msgstr "Attributewert"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "Audience / Categories"
+msgstr "Zielgruppe / Kategorien"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_feed_availability
+msgid "Availibility (for Export)"
+msgstr "Verfügbarkeit (Export)"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__availibility_threshold
+msgid "Availibility Threshold"
+msgstr "Verfügbarkeits-Schwelle"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__bright_color
+msgid "Bright Color"
+msgstr "Helle Farbe"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__category_id
+msgid "Category"
+msgstr "Kategorie"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
+msgid "Category Name"
+msgstr "Kategorienname"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
+msgid "Category Name..."
+msgstr "Kategorienname..."
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_color
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_color
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_color_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_color_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_color_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_color_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_color_id
+msgid "Color"
+msgstr "Farbe"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__color_image
+msgid "Color Image"
+msgstr "Farbbild"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__html_color
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__color
+msgid "Color Index"
+msgstr "Farbindex"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Color Name"
+msgstr "Farbname"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_color_select
+msgid "Color:"
+msgstr "Farbe:"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__color_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_color
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_color
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Colors"
+msgstr "Farben"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_condition
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_condition_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_condition_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_condition_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_condition_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_condition_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+msgid "Condition"
+msgstr "Zustand"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_condition
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_condition
+msgid "Conditions"
+msgstr "Zustände"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_conditions_search
+msgid "Conditions Search"
+msgstr "Zustandssuche"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
+msgid "Configure Feed"
+msgstr "Feed konfigurieren"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__content
+msgid "Content"
+msgstr "Inhalt"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_country_of_origin_id
+msgid "Country of Origin"
+msgstr "Ursprungsland"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__create_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__create_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line__ayu_data_export_label
+msgid "Data Export Label"
+msgstr "Datenexport-Name"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Delete"
+msgstr "Löschen"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.product_text_category,name:ayu_product_data.product_text_category_description
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__description
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__description
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__description
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__description
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_document_tree
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__description_plain
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__description_plain
+msgid "Description (Short)"
+msgstr "Beschreibung (kurz)"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__description_pt_ids
+msgid "Description Product Templates"
+msgstr "Beschreibungs-Produktvorlagen"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_detail
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "Details"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__display_name
+#: model:ir.model.fields,field_description:ayu_product_data.field_website__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Document"
+msgstr "Dokument"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_user_document
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_user_document
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_user_document
+msgid "Documents"
+msgstr "Dokument"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__export_id
+msgid "Export"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__export_fields
+msgid "Export Field"
+msgstr "Export-Feld"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "Export Template"
+msgstr "Export-Vorlage"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ir_exports_line
+msgid "Exports Line"
+msgstr ""
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_tree
+msgid "Feed"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_ir_cron_id
+msgid "Feed Scheduler"
+msgstr "Feed-Planer"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_feeds
+msgid "Feeds"
+msgstr ""
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "Fields"
+msgstr "Felder"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__attachment_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__file
+msgid "File"
+msgstr "Datei"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__name
+msgid "Filename"
+msgstr "Dateiname"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "For more information, see"
+msgstr "Für mehr Informationen, siehe"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_feed__availibility_threshold
+msgid "Forecast quantities lower or equal the threshold are 'out_of_stock'"
+msgstr ""
+"Vorhergesagte Mengen kleiner oder gleich der Schwelle sind 'Nicht auf "
+"Lager'."
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_gender
+#: model:ir.actions.act_window,name:ayu_product_data.action_gender
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_gender
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_gender_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_gender_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_gender_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_gender_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_gender_id
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_gender
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_tree
+msgid "Gender"
+msgstr "Geschlecht"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_genders_search
+msgid "Gender Search"
+msgstr "Geschlechtersuche"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "General"
+msgstr "Allgemein"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_google_category
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_google_category
+msgid "Google Product Categories"
+msgstr "Google-Produktkategorien"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_categorys_search
+msgid "Google Product Categories Search"
+msgstr "Google-Produktkategoriensuche"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_google_category
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_google_category_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_tree
+msgid "Google Product Category"
+msgstr "Google-Produktkategorie"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_base_mixin__ayu_google_category_id
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__ayu_google_category_id
+#: model:ir.model.fields,help:ayu_product_data.field_product_product__ayu_google_category_id
+#: model:ir.model.fields,help:ayu_product_data.field_product_template__ayu_google_category_id
+msgid ""
+"Google will automatically categorize your product based on title, "
+"description, pricing, brand and GTIN. In specific cases you may need to  "
+"override it."
+msgstr ""
+"Google wird Ihr produkt automatisch anhand von Titel, Beschreibung, Preis, "
+"Marke und GTIN kategorisieren. Nur in Ausnahmefällen müssen Sie das manuell "
+"setzen."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_documents_search
+msgid "Group By"
+msgstr "Gruppieren Nach"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__bright_color
+msgid "Helper field to make the color select more visible for bright colors."
+msgstr ""
+"Helfer-Feld, um die Farbauswahl für helle Farben besser sichtbar zu machen."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_feed__country_id
+msgid "Helper field to quickly see the context country."
+msgstr "Helfer-Feld, um das Land des Kontextes zu sehen."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__id
+#: model:ir.model.fields,field_description:ayu_product_data.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__identifier
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__identifier
+msgid "Identifier"
+msgstr "Bezeichner"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_age_group__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_condition__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_feed__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_gender__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_google_category__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_line__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_material__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_product_detail__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_product_highlight__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_product_text__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_product_text_category__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_tag__active
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_tag_category__active
+msgid ""
+"If the active field is set to false, it will allow you to hide it without "
+"removing it."
+msgstr ""
+"Deaktivieren erlaubt es Ihnen, einen Eintrag zu verstecken, ohne ihn zu "
+"löschen."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_age_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_age_group_id
+msgid "Ig Has Ayu Age Group"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_color_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_color_id
+msgid "Ig Has Ayu Color"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_condition_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_condition_id
+msgid "Ig Has Ayu Condition"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_country_of_origin_id
+msgid "Ig Has Ayu Country Of Origin"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_description_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_description_id
+msgid "Ig Has Ayu Description"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_gender_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_gender_id
+msgid "Ig Has Ayu Gender"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_google_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_google_category_id
+msgid "Ig Has Ayu Google Category"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_line_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_line_id
+msgid "Ig Has Ayu Line"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_material_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_material_id
+msgid "Ig Has Ayu Material"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_product_highlight_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_product_highlight_ids
+msgid "Ig Has Ayu Product Highlight"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_product_text_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_product_text_ids
+msgid "Ig Has Ayu Product Text"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_public_categ_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_public_categ_ids
+msgid "Ig Has Public Categ"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_image_url
+msgid "Image URL"
+msgstr "Bild-URL"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+msgid "Implied Data"
+msgstr "Abgeleitete Daten"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+msgid "Implied From"
+msgstr "Abgeleitet von"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__implied_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_implied_product_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_implied_product_detail_ids
+msgid "Implied Product Details"
+msgstr "Abgeleitete Produktdetails"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
+msgid "Interval Number"
+msgstr "Intervall"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_type
+msgid "Interval Unit"
+msgstr "Intervall-Einheit"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_item_group
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_item_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_item_group_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_item_group_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_tree
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_order_product_search
+msgid "Item Group"
+msgstr "Artikelgruppe"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_item_group_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_item_group_detail_ids
+msgid "Item Group Details"
+msgstr "Artikelgruppendetails"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_groups_search
+msgid "Item Group Search"
+msgstr "Artikelgruppensuche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_item_group
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__item_group_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__item_group_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_item_group
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_item_group
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+msgid "Item Groups"
+msgstr "Artikelgruppen"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__language_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__language_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_documents_search
+msgid "Language"
+msgstr "Sprache"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report____last_update
+#: model:ir.model.fields,field_description:ayu_product_data.field_website____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__write_uid
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__write_date
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_line
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_line_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_line_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_line_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_line_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_line_id
+msgid "Line"
+msgstr "Linie"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Line Name"
+msgstr "Linienname"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__line_ids
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Lines"
+msgstr "Linien"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_material
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_material_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_material_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_material_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_material_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__ayu_material_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_tree
+msgid "Material"
+msgstr ""
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Material Name"
+msgstr "Materialname"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_materials_search
+msgid "Material Search"
+msgstr "Materialsuche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_material
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__material_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_material
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_material
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Materials"
+msgstr "Materialien"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "Model Field"
+msgstr "Datenmodell-Feld"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__name
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__name
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+msgid "Name"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_nextcall
+msgid "Next Execution Date"
+msgstr "Nächstes Ausführungsdatum"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
+msgid "Next call"
+msgstr "Nächste Ausführung"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_res_config_settings__ayu_product_feed_nextcall
+msgid "Next planned execution date for this job."
+msgstr "Nächstes geplantes Ausführungsdatum für die Aktion."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid ""
+"Note, that modifying the fields will also modify the selected export. "
+"Proceed with caution."
+msgstr ""
+"Beachten Sie, dass Änderungen an den Feldern auch den gewählten Export "
+"ändern. Mit Vorsicht nutzen."
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+msgid "Options"
+msgstr "Optionen"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Origin Data Field"
+msgstr "Ursprungsdatenfeld"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_product_text_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_product_text_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_text_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_text_ids
+msgid "Other Texts"
+msgstr "Andere Texte"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_google_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_google_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_google_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_google_category_id
+msgid "Override Google Product Category"
+msgstr "Google-Produktkategorie überschreiben"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__parent_id
+msgid "Parent Category"
+msgstr "Elternkategorie"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_product
+msgid "Product"
+msgstr "Produkt"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_tree
+msgid "Product Color"
+msgstr "Produktfarbe"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_colors_search
+msgid "Product Color Search"
+msgstr "Produktfarbensuche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_color
+msgid "Product Colors"
+msgstr "Produktfarben"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_condition
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_tree
+msgid "Product Condition"
+msgstr "Produktzustand"
+
+#. module: ayu_product_data
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_data
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
+msgid "Product Data"
+msgstr "Produktdaten"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_base_mixin
+msgid "Product Data Base Mixin"
+msgstr "Produktdaten Basis-Mixin"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_feed
+#: model:ir.model.fields,field_description:ayu_product_data.field_website__ayu_product_feed_id
+msgid "Product Data Feed"
+msgstr "Produktdaten-Feed"
+
+#. module: ayu_product_data
+#: model:ir.actions.server,name:ayu_product_data.ir_cron_generate_feed_files_ir_actions_server
+#: model:ir.cron,cron_name:ayu_product_data.ir_cron_generate_feed_files
+#: model:ir.cron,name:ayu_product_data.ir_cron_generate_feed_files
+msgid "Product Data: generate feed files"
+msgstr "Produktdaten: Feed-Dateien generieren"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_description_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_description_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_description_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_description_id
+msgid "Product Description"
+msgstr "Produktbeschreibung"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_product_detail
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+msgid "Product Detail"
+msgstr "Produktdetail"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_details_search
+msgid "Product Detail Search"
+msgstr "Produktdetailsuche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_product_detail
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__custom_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_custom_product_detail_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_custom_product_detail_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_product_detail
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_detail
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_tree
+msgid "Product Details"
+msgstr "Produktdetails"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_detail_text_export
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_detail_text_export
+msgid "Product Details Text Export"
+msgstr "Produktdetails Textexport"
+
+#. module: ayu_product_data
+#: code:addons/ayu_product_data/models/res_config_settings.py:0
+#, python-format
+msgid "Product Feed"
+msgstr "Produkt-Feed"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_product_highlight
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlight_form
+msgid "Product Highlight"
+msgstr "Produkt-Highlight"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlights_search
+msgid "Product Highlight Search"
+msgstr "Produkt-Highlight-Suche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_product_highlight
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_product_highlight_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_product_highlight_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_highlight_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_highlight_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_product_highlight
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_highlight
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlight_tree
+msgid "Product Highlights"
+msgstr "Produkt-Highlights"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_highlight_text_export
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_highlight_text_export
+msgid "Product Highlights Text Export"
+msgstr "Produkt-Highlight Textexport"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_line
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_order_product_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_tree
+msgid "Product Line"
+msgstr "Produktlinie"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_product_line
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_product_line
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_line
+msgid "Product Lines"
+msgstr "Produktlinien"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_lines_search
+msgid "Product Lines Search"
+msgstr "Produktliniensuche"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+msgid "Product Name"
+msgstr "Produktname"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_tag
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_tree
+msgid "Product Tag"
+msgstr "Produkt-Tag"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_tag_category
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_tree
+msgid "Product Tag Category"
+msgstr "Produkt-Tag-Kategorie"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_categorys_search
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tags_search
+msgid "Product Tag Search"
+msgstr "Produkt-Tag-Suche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_tag
+msgid "Product Tags"
+msgstr "Produkt-Tags"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_template
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__product_template_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__product_template_id
+msgid "Product Template"
+msgstr "Produktvorlage"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__product_template_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__prod_doc_rel_ids
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_gender_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_google_category_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_material_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_line_form
+msgid "Product Templates"
+msgstr "Produktvorlagen"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_product_text
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_form
+msgid "Product Text"
+msgstr "Produkttext"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_product_text_category
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_product_text_category
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_category_tree
+msgid "Product Text Categories"
+msgstr "Produkttextkategorien"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_product_text_category
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_category_form
+msgid "Product Text Category"
+msgstr "Produkttextkategorie"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_categories_search
+msgid "Product Text Category Search"
+msgstr "Produkttextkategoriensuche"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_texts_search
+msgid "Product Text Search"
+msgstr "Produkttextsuche"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_product_text
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_product_text
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_text
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_tree
+msgid "Product Texts"
+msgstr "Produkttexte"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__product_data_specification_help_url
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__product_data_specification_help_url
+msgid "Product data specification help URL"
+msgstr "Produktdatenspezifikations-Url"
+
+#. module: ayu_product_data
+#: code:addons/ayu_product_data/models/feed.py:0
+#, python-format
+msgid "Products"
+msgstr "Produkte"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
+msgid "Refresh every"
+msgstr "Aktualisieren jede"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "Refresh feed export files."
+msgstr "Feed Export-Dateien aktualisieren"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_prod_doc_rel_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_prod_doc_rel_ids
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_related_documents
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Related Documents"
+msgstr "Verknüpfte Dokumente"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+msgid "Related Product Templates"
+msgstr "Verknüpfte Produktvorlagen"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_prod_doc_rel
+msgid "Relationship between Products and User Documents"
+msgstr "Verknüpfung zwischen Produkten und Nutzerdokumenten"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_prod_tag_rel
+msgid "Relationship between Tags and Products"
+msgstr "Verknüpfung zwischen Tags und Produkten"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
+msgid "Repeat every x."
+msgstr "Jede x wiederholen"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_sale_report
+msgid "Sales Analysis Report"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__section_name
+msgid "Section Name"
+msgstr "Abschnittsname"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__sequence
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__sequence
+msgid "Sequence"
+msgstr "Reihenfolge"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "Shop"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__show_on_detail_page
+msgid "Show On Detail Page"
+msgstr "Auf Detailseite anzeigen"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__source_data_id
+msgid "Source Data ID"
+msgstr "Datenursprungs-ID"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__source_data_ref
+msgid "Source Data Reference"
+msgstr "Datenursprungs-Referenz"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__source_data_model
+msgid "Source Model"
+msgstr "Datenursprungs-Modell"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__tag_id
+msgid "Tag"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__product_template_rel_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_tag_rel_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_tag_rel_ids
+msgid "Tag Assignments"
+msgstr "Tag-Zuweisung"
+
+#. module: ayu_product_data
+#: model:ir.actions.act_window,name:ayu_product_data.action_tag_category
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_tag_category
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_tag_category
+msgid "Tag Categories"
+msgstr "Tag-Kategorien"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__tag_category_id
+msgid "Tag Category"
+msgstr "Tag-Kategorie"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+msgid "Tag Name"
+msgstr "Tag-Name"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
+msgid "Tag Name..."
+msgstr "Tag-Name..."
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_taggable
+msgid "Taggable Mixin"
+msgstr "Tag-bar Mixin"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_gender__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_line__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_material__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__tag_ids
+#: model:ir.ui.menu,name:ayu_product_data.menu_product_tag
+#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_tag
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
+msgid "Tags"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_material
+msgid "Textiles"
+msgstr "Textilien"
+
+#. module: ayu_product_data
+#: code:addons/ayu_product_data/models/product_text.py:0
+#, python-format
+msgid "The description category cannot be deleted"
+msgstr "Die Beschreibungskategorie kann nicht gelöscht werden"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_product_product__ayu_product_type_text_export
+#: model:ir.model.fields,help:ayu_product_data.field_product_template__ayu_product_type_text_export
+msgid ""
+"The eCommerce Categories in the Google Merchant Center product_type format"
+msgstr ""
+"Die eCommerce-Kategorien im product_type Format des Google Merchant Center"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
+msgid "The files are served under '/shop/feed/{filename}'"
+msgstr "Die Dateien liegen unter '/shop/feed/{Dateiname}'"
+
+#. module: ayu_product_data
+#: model_terms:ir.actions.act_window,help:ayu_product_data.action_gender
+msgid ""
+"The gender values male, female and unisex are specified by Schema.org\n"
+"        https://schema.org/suggestedGender. Although technically possible, it is not recommended\n"
+"        to modify or to add new entries."
+msgstr ""
+"Die Werte Herren, Damen und Unisex sind hier spezifiziert: Schema.org\n"
+" https://schema.org/suggestedGender. Auch wenn technisch möglich, so wird nicht empfohlen, sie zu ändern."
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_age_group_unique_identifier
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_color_unique_identifier
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_condition_unique_identifier
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_gender_unique_identifier
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_google_category_unique_identifier
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_item_group_unique_identifier
+msgid "The identifier already exists"
+msgstr "Der Bezeichner existiert bereits"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_product_text_unique_identifier
+msgid "The identifier already exists for this category"
+msgstr "Der Bezeichner existiert bereits in dieser Kategorie"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_google_category_unique_name
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_line_unique_name
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_material_unique_name
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_product_text_category_unique_name
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_tag_category_unique_name
+msgid "The name already exists"
+msgstr "Der Name existiert bereits"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_tag_unique_name
+msgid "The name already exists for this category"
+msgstr "Der Name existiert bereits in dieser Kategorie"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__product_type_name
+msgid "The name in the Google product_type format, separated by '>'"
+msgstr "Der Name im Google product_type Format, getrennt mit '>'"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_prod_tag_rel_unique_rel
+msgid "The product already has this tag from this source"
+msgstr "Das Produkt enthält diesen Tag bereits von dieser Quelle"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_prod_doc_rel_unique_rel
+msgid "The product already has this user document"
+msgstr "Das Produkt hat diesen Nutzerdokument bereits"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_feed__context_user_id
+msgid ""
+"The user context for of the product data, for example used for pricelist "
+"calculations"
+msgstr ""
+"Der Nutzer-Kontext für die Produktdaten, z.B. für Preislistenberechnungen "
+"genutzt"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_product_detail_unique_name_value
+msgid "The value already exists with this name"
+msgstr "Der Wert existeriert bereits mit diesem Namen"
+
+#. module: ayu_product_data
+#: model:ir.model.constraint,message:ayu_product_data.constraint_ayu_product_data_product_highlight_unique_name
+msgid "This highlight already exists"
+msgstr "Das Highlight existeriert bereits"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "This will unassign the tag from this product. Are you sure?"
+msgstr "Das wird den Tag von diesem Produkt löschen. Sicher?"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,description:ayu_product_data.age_group_adult
+msgid ""
+"Typically teens or older. All sizes within this age group have been "
+"manufactured to fit an adult or teen."
+msgstr ""
+"Normalerweise ab 13 Jahren. Alle Erwachsenengrößen werden für Teenager und "
+"Erwachsene hergestellt."
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,description:ayu_product_data.age_group_newborn
+msgid ""
+"Up to 3 months old. Newborn sizes are often identified by the age range in "
+"months (0-3) or just 'newborn'."
+msgstr ""
+"Bis 3 Monate. Neugeborenengrößen werden oft durch das Alter in Monaten (0–3)"
+" und/oder durch die Angabe 'Neugeborene' spezifiziert."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__use_as_filter
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__use_as_filter
+msgid "Use As Filter"
+msgstr "Als Filter nutzen"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_product_product__ayu_item_group_id
+#: model:ir.model.fields,help:ayu_product_data.field_product_template__ayu_item_group_id
+msgid "Used to group your products, similar to variants."
+msgstr "Genutzt um Ihre Produkte zu gruppieren, ähnlich wie mit Varianten."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__context_user_id
+msgid "User Context"
+msgstr "Nutzerkontext"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__country_id
+msgid "User Country"
+msgstr "Nutzerland"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_ayu_product_data_user_document
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__user_document_id
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_document_form
+msgid "User Document"
+msgstr "Nutzerdokument"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_documents_search
+msgid "User Document Search"
+msgstr "Nutzerdokumentensuche"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_user_document_tree
+msgid "User Documents"
+msgstr "Nutzerdokumente"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_website
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__website_id
+msgid "Website"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__website_color_pt_ids
+msgid "Website Color Product Templates"
+msgstr "Website Farb-Produktvorlagen"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_public_category
+msgid "Website Product Category"
+msgstr "Website-Produktkategorie"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__html_color
+msgid "You can set a specific HTML color index (e.g. #ff0000)."
+msgstr "Sie können einen spezifischen HTML Farb-Index setzen, bspw. #ff0000."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__color_image
+msgid "You can use an image for the color. It will be converted to 30x30px"
+msgstr ""
+"Sie können ein Bild für die Farbe nutzen. Das Bild wird zu 30x30px "
+"konvertiert"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,name:ayu_product_data.age_group_adult
+msgid "adult"
+msgstr "Erwachsene"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_type_text_export
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_type_text_export
+msgid "eCommerce Categories as product_type"
+msgstr "eCommerce-Kategorien als product_type"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__public_categ_ids
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "eCommerce Category / Product Type"
+msgstr "eCommerce-Kategorie / Produkttyp"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.gender,name:ayu_product_data.gender_female
+msgid "female"
+msgstr "Damen"
+
+#. module: ayu_product_data
+#: model:ir.model.fields.selection,name:ayu_product_data.selection__product_product__ayu_feed_availability__in_stock
+msgid "in_stock"
+msgstr "in_stock"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,name:ayu_product_data.age_group_infant
+msgid "infant"
+msgstr "Säuglinge"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,name:ayu_product_data.age_group_kids
+msgid "kids"
+msgstr "Kinder"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.gender,name:ayu_product_data.gender_male
+msgid "male"
+msgstr "Herren"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.condition,name:ayu_product_data.condition_new
+msgid "new"
+msgstr "Neu"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,name:ayu_product_data.age_group_newborn
+msgid "newborn"
+msgstr "Neugeborene"
+
+#. module: ayu_product_data
+#: model:ir.model.fields.selection,name:ayu_product_data.selection__product_product__ayu_feed_availability__out_of_stock
+msgid "out_of_stock"
+msgstr "out_of_stock"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.condition,name:ayu_product_data.condition_refurbished
+msgid "refurbished"
+msgstr "Aufgearbeitet"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.age_group,name:ayu_product_data.age_group_toddler
+msgid "toddler"
+msgstr "Kleinkinder"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.gender,name:ayu_product_data.gender_unisex
+msgid "unisex"
+msgstr "Unisex"
+
+#. module: ayu_product_data
+#: model:ayu_product_data.condition,name:ayu_product_data.condition_used
+msgid "used"
+msgstr "Gebraucht"

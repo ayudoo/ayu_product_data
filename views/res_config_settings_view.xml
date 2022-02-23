@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.ayu_product_data</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="20"/>
+    <field name="inherit_id" ref="website_sale.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <div id="sale_product_catalog_settings" position="after">
+        <h2>Product Data</h2>
+        <div class="row mt16 o_settings_container" id="ayu_product_data_settings">
+          <div class="col-12 col-lg-6 o_setting_box">
+            <div class="o_setting_left_pane">
+              <field name="ayu_product_feed_activation"/>
+            </div>
+            <div class="o_setting_right_pane">
+              <label for="ayu_product_feed_activation"/>
+              <div class="text-muted">
+                Activate the CSV and XLS Product Data Feed
+              </div>
+              <div class="row mt8" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+                <div style="margin-left: 20px;">
+                  <button
+                    type="object"
+                    name="action_open_feed"
+                    string="Configure Feed"
+                    class="btn-link"
+                    icon="fa-arrow-right"/>
+                </div>
+              </div>
+              <div class="row mt8" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+                <label for="ayu_product_feed_interval_number" string="Refresh every" class="col-lg-4 o_light_label"/>
+                <field name="ayu_product_feed_interval_number" class='oe_inline' style='width: 50px !important;'/>
+                <field name="ayu_product_feed_interval_type" class='oe_inline'/>
+              </div>
+              <div class="row" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+                <label for="ayu_product_feed_nextcall" string="Next call" class="col-lg-4 o_light_label"/>
+                <field name="ayu_product_feed_nextcall"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </field>
+  </record>
+
+</odoo>
