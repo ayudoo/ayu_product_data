@@ -112,6 +112,8 @@ class UserDocument(models.Model):
         for record in self:
             if record.description:
                 record.description_plain = html2plaintext(record.description)
+            else:
+                record.description_plain = ""
 
     description_plain = fields.Char(
         string="Description (Short)",
