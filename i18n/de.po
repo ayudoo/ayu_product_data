@@ -774,11 +774,6 @@ msgid "Interval Number"
 msgstr "Intervall"
 
 #. module: ayu_product_data
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_type
-msgid "Interval Unit"
-msgstr "Intervall-Einheit"
-
-#. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_item_group
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_item_group_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_item_group_id
@@ -990,11 +985,6 @@ msgid "Name"
 msgstr ""
 
 #. module: ayu_product_data
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_nextcall
-msgid "Next Execution Date"
-msgstr "Nächstes Ausführungsdatum"
-
-#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
 msgid "Next call"
 msgstr "Nächste Ausführung"
@@ -1141,6 +1131,21 @@ msgstr "Produktdetails Textexport"
 #, python-format
 msgid "Product Feed"
 msgstr "Produkt-Feed"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_type
+msgid "Product Feed Interval Unit"
+msgstr "Produkt-Feed Intervall-Einheit"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_nextcall
+msgid "Product Feed Next Execution Date"
+msgstr "Produkt-Feed Nächstes Ausführungsdatum"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
+msgid "Product Feed Repeat every x."
+msgstr "Produkt-Feed Jede X wiederholen"
 
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_product_highlight
@@ -1342,11 +1347,6 @@ msgstr "Verknüpfung zwischen Produkten und Nutzerdokumenten"
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_prod_tag_rel
 msgid "Relationship between Tags and Products"
 msgstr "Verknüpfung zwischen Tags und Produkten"
-
-#. module: ayu_product_data
-#: model:ir.model.fields,help:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
-msgid "Repeat every x."
-msgstr "Jede x wiederholen"
 
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_sale_report
@@ -1683,7 +1683,7 @@ msgstr "Damen"
 #. module: ayu_product_data
 #: model:ir.model.fields.selection,name:ayu_product_data.selection__product_product__ayu_feed_availability__in_stock
 msgid "in_stock"
-msgstr "in_stock"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ayu_product_data.age_group,name:ayu_product_data.age_group_infant
@@ -1713,7 +1713,7 @@ msgstr "Neugeborene"
 #. module: ayu_product_data
 #: model:ir.model.fields.selection,name:ayu_product_data.selection__product_product__ayu_feed_availability__out_of_stock
 msgid "out_of_stock"
-msgstr "out_of_stock"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ayu_product_data.condition,name:ayu_product_data.condition_refurbished

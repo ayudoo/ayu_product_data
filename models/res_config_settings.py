@@ -14,18 +14,18 @@ class ResConfigSettings(models.TransientModel):
 
     ayu_product_feed_interval_number = fields.Integer(
         default=1,
-        help="Repeat every x.",
+        help="Product Feed Repeat every x.",
         related="ayu_product_feed_ir_cron_id.interval_number",
         readonly=False,
     )
     ayu_product_feed_interval_type = fields.Selection(
-        string="Interval Unit",
+        string="Product Feed Interval Unit",
         default="days",
         related="ayu_product_feed_ir_cron_id.interval_type",
         readonly=False,
     )
     ayu_product_feed_nextcall = fields.Datetime(
-        string="Next Execution Date",
+        string="Product Feed Next Execution Date",
         related="ayu_product_feed_ir_cron_id.nextcall",
         readonly=False,
     )
