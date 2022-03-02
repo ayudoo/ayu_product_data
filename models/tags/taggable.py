@@ -107,7 +107,7 @@ class TaggableMixin(models.AbstractModel):
         ProductTagRel.search(
             [
                 ("source_data_model", "=", self._table),
-                ("source_data_id", "=", self.id),
+                ("source_data_id", "in", self.ids),
             ]
         ).unlink()
         return super().unlink()
