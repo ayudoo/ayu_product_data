@@ -77,7 +77,10 @@ $color_image_size: 20px;
 
   .product-color-btn:not(.active) {
     .product-color-bright .product-color-inner {
-      background: #DDDDDD;
+      background-color: rgba(207,207,207,0.23);
+      img {
+        background-color: white;
+      }
     }
 
     .product-color-outer {
