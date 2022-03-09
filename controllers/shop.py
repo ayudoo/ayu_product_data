@@ -4,7 +4,7 @@ from odoo.osv import expression
 from odoo.http import request
 
 
-class WebsiteSaleProductDataFeed(WebsiteSale):
+class WebsiteSaleProductData(WebsiteSale):
 
     def _get_search_domain(
         self, search, category, attrib_values, search_in_description=True
