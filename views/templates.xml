@@ -193,7 +193,7 @@
     name="Show Product Tags"
     priority="300">
     <xpath expr="//div[@id='wrap']" position="inside">
-      <div class="container">
+      <div class="container-fluid">
         <t t-call="ayu_product_data.product_tags"/>
       </div>
     </xpath>
