@@ -22,7 +22,7 @@ Features:
     "depends": [
         "base",
         # product dependency by sale, payment, account
-        "website_sale",
+        "website_sale_stock",
     ],
     "data": [
         "security/ir.model.access.csv",
