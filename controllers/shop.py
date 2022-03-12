@@ -34,7 +34,7 @@ class WebsiteSaleProductData(WebsiteSale):
             except Exception:
                 pass
 
-        return request.env["ayu_product_data.tag"].browse(valid_ids)
+        return request.env["ayu_product_data.tag"].browse(valid_ids).exists()
 
     @http.route([
         '''/shop''',
