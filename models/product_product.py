@@ -17,9 +17,16 @@ class ProductProduct(models.Model):
             record.ayu_image_url = "{}{}".format(
                 base_url, website.image_url(image, "image_1024")
             )
+            record.ayu_image_url_small = "{}{}".format(
+                base_url, website.image_url(image, "image_128")
+            )
 
     ayu_image_url = fields.Char(
         string="Image URL", translate=False, compute=_compute_ayu_image_url
+    )
+
+    ayu_image_url_small = fields.Char(
+        string="Image URL Small", translate=False, compute=_compute_ayu_image_url
     )
 
     def _compute_ayu_feed_availability(self):
