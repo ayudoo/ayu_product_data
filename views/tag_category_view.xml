@@ -32,11 +32,11 @@
                 <field name="name" placeholder="Category Name..."/>
               </h1>
             </div>
-            <!-- <group>
-              <group string="Options">
+            <group>
+              <group>
                 <field name="use_as_filter"/>
               </group>
-            </group> -->
+            </group>
             <notebook>
               <page
                 name="tags"
