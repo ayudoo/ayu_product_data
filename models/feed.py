@@ -60,6 +60,7 @@ class Feed(models.Model):
         + " pricelist calculations",
         default=lambda self: self.env.ref("base.public_user"),
         required=True,
+        domain=[("active", "in", [True, False])],
     )
 
     country_id = fields.Many2one(
@@ -142,8 +143,9 @@ class Feed(models.Model):
     def _get_feed_products(self):
         domain = self._get_feed_products_domain()
         pricelist = self.env["product.pricelist"]._get_partner_pricelist_multi(
-            self.context_user_id.ids, company_id=self.website_id.company_id.id
-        )[self.context_user_id.id]
+            self.context_user_id.partner_id.ids,
+            company_id=self.website_id.company_id.id,
+        )[self.context_user_id.partner_id.id]
 
         Product = (
             self.env["product.product"]
@@ -152,7 +154,7 @@ class Feed(models.Model):
                 availibility_threshold=self.availibility_threshold,
                 import_compat=False,
                 website_id=self.website_id.id,
-                partner=self.context_user_id,
+                partner=self.context_user_id.partner_id,
                 pricelist=pricelist.id,
             )
             .sudo()
