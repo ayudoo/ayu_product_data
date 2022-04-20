@@ -19,7 +19,7 @@
               <div class="text-muted">
                 Activate the CSV and XLS Product Data Feed
               </div>
-              <div class="row mt8" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+              <div class="row mt8">
                 <div style="margin-left: 20px;">
                   <button
                     type="object"

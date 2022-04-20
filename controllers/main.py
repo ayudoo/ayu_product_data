@@ -12,8 +12,10 @@ class WebsiteSaleProductDataFeed(WebsiteSale):
     )
     def products_feed(self, filename, **kwargs):
         if self._has_products_feed():
-            attachment = request.website.ayu_product_feed_id.attachment_ids.filtered(
-                lambda x: x.name == filename
+            attachment = (
+                request.website.ayu_product_feed_id.sudo().attachment_ids.filtered(
+                    lambda x: x.name == filename
+                )
             )
 
             if attachment:
