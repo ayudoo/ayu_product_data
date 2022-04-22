@@ -188,7 +188,7 @@ class Feed(models.Model):
 
         for language in self.website_id.language_ids:
             product_data = (
-                products.with_context(lang=language.code)
+                products.with_context(lang=language.code, display_default_code=False)
                 .export_data(field_names)
                 .get("datas", [])
             )
