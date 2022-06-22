@@ -13,13 +13,18 @@ class ProductProduct(models.Model):
             website = self.env["website"].search([], limit=1)
 
         for record in self:
-            image = record._get_images()[0]
-            record.ayu_image_url = "{}{}".format(
-                base_url, website.image_url(image, "image_1024")
-            )
-            record.ayu_image_url_small = "{}{}".format(
-                base_url, website.image_url(image, "image_128")
-            )
+            images = record._get_images()
+            if images:
+                image = images[0]
+                record.ayu_image_url = "{}{}".format(
+                    base_url, website.image_url(image, "image_1024")
+                )
+                record.ayu_image_url_small = "{}{}".format(
+                    base_url, website.image_url(image, "image_128")
+                )
+            else:
+                record.ayu_image_url = ""
+                record.ayu_image_url_small = ""
 
     ayu_image_url = fields.Char(
         string="Image URL", translate=False, compute=_compute_ayu_image_url
