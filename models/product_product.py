@@ -1,8 +1,20 @@
 from odoo import fields, models
+from werkzeug import urls
 
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
+
+    def _compute_ayu_website_url(self):
+        base_url = self.env["ir.config_parameter"].get_param("web.base.url")
+        website_id = self.env.context.get("website_id")
+
+        for record in self:
+            record.ayu_website_url = urls.url_join(base_url, record.website_url)
+
+    ayu_website_url = fields.Char(
+        string="Full Website URL", translate=False, compute=_compute_ayu_website_url
+    )
 
     def _compute_ayu_image_url(self):
         base_url = self.env["ir.config_parameter"].get_param("web.base.url")

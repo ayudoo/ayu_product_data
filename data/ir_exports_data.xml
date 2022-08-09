@@ -11,7 +11,7 @@
         (0,0,{'name': 'default_code', 'ayu_data_export_label': 'id'}),
         (0,0,{'name': 'display_name', 'ayu_data_export_label': 'title'}),
         (0,0,{'name': 'ayu_description_id/content', 'ayu_data_export_label': 'description'}),
-        (0,0,{'name': 'website_url', 'ayu_data_export_label': 'link'}),
+        (0,0,{'name': 'ayu_website_url', 'ayu_data_export_label': 'link'}),
         (0,0,{'name': 'ayu_image_url', 'ayu_data_export_label': 'image_link'}),
         (0,0,{'name': 'ayu_feed_availability', 'ayu_data_export_label': 'availability'}),
         (0,0,{'name': 'price', 'ayu_data_export_label': 'price'}),
