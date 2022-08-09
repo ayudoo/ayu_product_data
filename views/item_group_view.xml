@@ -110,6 +110,7 @@
                     <field name="ayu_condition_id"/>
                     <field name="ayu_gender_id"/>
                     <field name="ayu_age_group_id"/>
+                    <field name="website_published" string="Published" widget="boolean_toggle"/>
                   </tree>
                 </field>
               </page>
