@@ -85,10 +85,10 @@ class Feed(models.Model):
         "website", string="Website", compute=_compute_website_id
     )
 
-    location_id = fields.Many2one(
-        "stock.location",
-        string="Location",
-        related="website_id.warehouse_id.lot_stock_id",
+    warehouse_id = fields.Many2one(
+        "stock.warehouse",
+        string="Warehouse",
+        related="website_id.warehouse_id",
     )
 
     def _compute_attachment_ids(self):
@@ -160,7 +160,7 @@ class Feed(models.Model):
                 availibility_threshold=self.availibility_threshold,
                 import_compat=False,
                 website_id=self.website_id.id,
-                lot_id=self.location_id.id,
+                warehouse=self.warehouse_id.id,
                 partner=self.context_user_id.partner_id,
                 pricelist=pricelist.id,
             )
