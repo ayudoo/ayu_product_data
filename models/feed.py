@@ -3,11 +3,36 @@ import logging
 from odoo import _, fields, models
 from odoo.addons.web.controllers.main import ExportXlsxWriter
 from odoo.tools import pycompat
+from odoo.tools.misc import xlsxwriter, get_lang
 
 _logger = logging.getLogger(__name__)
 
 
-def rows_to_csv(fields, rows):
+# in Odoo 14 after the update, we need to create a custom XlsxWriter that does not
+# read the environment from the request, because it leads to an unbound object error.
+class CronXlsxWriter(ExportXlsxWriter):
+
+    def __init__(self, env, field_names, row_count=0):
+        self.field_names = field_names
+        self.output = io.BytesIO()
+        self.workbook = xlsxwriter.Workbook(self.output, {'in_memory': True})
+        self.base_style = self.workbook.add_format({'text_wrap': True})
+        self.header_style = self.workbook.add_format({'bold': True})
+        self.header_bold_style = self.workbook.add_format({'text_wrap': True, 'bold': True, 'bg_color': '#e9ecef'})
+        self.date_style = self.workbook.add_format({'text_wrap': True, 'num_format': 'yyyy-mm-dd'})
+        self.datetime_style = self.workbook.add_format({'text_wrap': True, 'num_format': 'yyyy-mm-dd hh:mm:ss'})
+        self.worksheet = self.workbook.add_worksheet()
+        self.value = False
+        decimal_separator = get_lang(env).decimal_point
+        self.float_format = f'0{decimal_separator}00'
+        decimal_places = [res['decimal_places'] for res in env['res.currency'].search_read([], ['decimal_places'])]
+        self.monetary_format = f'0{decimal_separator}{max(decimal_places or [2]) * "0"}'
+
+        if row_count > self.worksheet.xls_rowmax:
+            raise UserError(_('There are too many rows (%s rows, limit: %s) to export as Excel 2007-2013 (.xlsx) format. Consider splitting the export.') % (row_count, self.worksheet.xls_rowmax))
+
+
+def rows_to_csv(env, fields, rows):
     fp = io.BytesIO()
     writer = pycompat.csv_writer(fp, quoting=1)
     writer.writerow(fields)
@@ -24,8 +49,8 @@ def rows_to_csv(fields, rows):
     return fp.getvalue()
 
 
-def rows_to_xlsx(fields, rows):
-    with ExportXlsxWriter(fields, len(rows)) as xlsx_writer:
+def rows_to_xlsx(env, fields, rows):
+    with CronXlsxWriter(env, fields, len(rows)) as xlsx_writer:
         for row_index, row in enumerate(rows):
             for cell_index, cell_value in enumerate(row):
                 if isinstance(cell_value, (list, tuple)):
@@ -204,7 +229,7 @@ class Feed(models.Model):
                 mimetype, handler = info
 
                 filename = self._generate_feed_filename(language, file_extension)
-                file_data = handler(labels, product_data)
+                file_data = handler(self.env, labels, product_data)
 
                 Attachment.create(
                     {
