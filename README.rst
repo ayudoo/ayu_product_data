@@ -5,6 +5,8 @@ Product Data, Tags and Feed
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
+**This is the Odoo 14 branch.**
+
 **This module is in alpha state. Feel free to provide feedback.**
 
 For advertising partners, product tags, search and website details, you may want to
