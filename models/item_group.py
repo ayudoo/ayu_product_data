@@ -113,7 +113,11 @@ class ItemGroup(models.Model):
 
     @api.model
     def name_create(self, name):
-        identifier, name = name.split(" ", 1)
+        if " " in name:
+            identifier, name = name.split(" ", 1)
+        else:
+            identifier = name
+
         return self.create(
             {
                 "identifier": identifier,

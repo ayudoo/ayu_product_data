@@ -96,7 +96,7 @@
           <field name="identifier"/>
           <field name="name"/>
           <field name="html_color" widget="color"/>
-          <field name="color_image" widget="image" height="20"/>
+          <field name="color_image" widget="image" options="{'size': [20, 20]}" />
         </tree>
       </field>
     </record>

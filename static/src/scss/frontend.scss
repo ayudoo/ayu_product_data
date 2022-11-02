@@ -40,6 +40,12 @@ $color_image_size: 20px;
   }
 }
 
+.product_tags {
+  .badge {
+    color: inherit;
+  }
+}
+
 .ayu-product-color-select {
   a,
   button,

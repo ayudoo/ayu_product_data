@@ -9,6 +9,8 @@ class WebsiteSaleProductData(WebsiteSale):
     def _get_search_domain(
         self, search, category, attrib_values, search_in_description=True
     ):
+        # we still need to implement this, so filter_by_price_enabled remains
+        # functional
         domain = super()._get_search_domain(
             search, category, attrib_values, search_in_description=search_in_description
         )
@@ -44,13 +46,20 @@ class WebsiteSaleProductData(WebsiteSale):
     ], type='http', auth="public", website=True, sitemap=WebsiteSale.sitemap_shop)
     def shop(self, **post):
         # Unfortunately, Odoo's shop method does not forward the post to search domain.
-        # Thus, we do this by the request context
+        # Thus, we do this by the request context, see _get_search_domain
         tag_ids = post.get("tags", None)
         if tag_ids:
             tags = self._ayu_get_tags_from_param(tag_ids)
-            ctx = request.context.copy()
-            ctx.update(tags=tags)
-            request.context = ctx
+            request.update_context(tags=tags)
 
         res = super().shop(**post)
+        return res
+
+    def _get_search_options(self, **post):
+        res = super()._get_search_options(**post)
+
+        tag_ids = post.get("tags", None)
+        if tag_ids:
+            res["tags"] = self._ayu_get_tags_from_param(tag_ids)
+
         return res

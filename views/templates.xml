@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-  <template
-    id="assets_frontend"
-    inherit_id="website.assets_frontend"
-    name="Ayu Product Data Frontend Assets">
-    <xpath expr="." position="inside">
-      <link
-        rel="stylesheet"
-        type="text/less"
-        href="/ayu_product_data/static/src/scss/frontend.scss"/>
-      <script
-        type="text/javascript"
-        src="/ayu_product_data/static/src/js/product_color_select.js"></script>
-    </xpath>
-  </template>
-
-  <template
-    id="assets_backend"
-    name="ayu_product_data_assets_backend"
-    inherit_id="web.assets_backend">
-    <xpath expr="." position="inside">
-      <link
-        rel="stylesheet"
-        type="text/scss"
-        href="/ayu_product_data/static/src/scss/backend.scss"/>
-    </xpath>
-  </template>
-
   <template id="product_text" name="Product Text">
     <div class="product-text" data-name="Item">
       <h6>
         <a
           t-att-class="'collapsed' if not show else ''"
           t-attf-href="##{body_id}"
-          data-toggle="collapse"
+          data-bs-toggle="collapse"
           aria-expanded="true"
           aria-controls="collapseOne"
           t-esc="product_text.category_id.name"/>
@@ -42,7 +15,7 @@
       <div
         t-attf-class="collapse #{'show' if show else ''}"
         t-att-id='body_id'
-        data-parent="#product_texts">
+        data-bs-parent="#product_texts">
         <t t-raw="0"/>
         <div t-field="product_text.content"/>
         <br/>
@@ -63,8 +36,8 @@
         <a
           t-att-class="'collapsed' if not show else ''"
           t-attf-href="#product_related_documents"
-          data-toggle="collapse"
-          data-parent="#product_texts"
+          data-bs-toggle="collapse"
+          data-bs-parent="#product_texts"
           aria-expanded="true"
           aria-controls="collapseOne">
           <div>Related Documents</div>
@@ -73,7 +46,7 @@
       <div
         t-attf-class="collapse #{'show' if show else ''}"
         t-attf-id="product_related_documents"
-        data-parent="#product_texts">
+        data-bs-parent="#product_texts">
         <div>
           <ul>
             <t t-foreach="related_documents" t-as='related_document'>
@@ -115,9 +88,9 @@
     active="True"
     customize_show="True"
     name="Show Product Texts">
-    <xpath expr="//div[@id='product_details']/hr[last()]" position="replace">
+    <div id="o_product_terms_and_share" position="after">
       <t t-call="ayu_product_data.product_texts"/>
-    </xpath>
+    </div>
   </template>
 
   <template id="product_color_select" name="Product Color Select">
@@ -169,7 +142,7 @@
     customize_show="True"
     name="Show Product Color Select">
     <xpath expr="//div[@id='product_details']//form" position="before">
-      <t t-call="product_color_select"/>
+      <t t-call="ayu_product_data.product_color_select"/>
     </xpath>
   </template>
 
@@ -178,7 +151,7 @@
       <div class="d-flex align-items-center flex-wrap pt-2">
         <t t-foreach="product.ayu_tag_rel_ids.tag_id" t-as="tag" t-if="tag.show_on_detail_page">
           <a t-att-href="keep('/shop', tags=tag.id)">
-            <span class="badge mb-2 mr-1 text-truncate border" t-esc="'#' + tag.name"/>
+            <span class="badge mt-2 mr-1 text-truncate border" t-esc="'#' + tag.name"/>
           </a>
         </t>
       </div>
@@ -193,7 +166,7 @@
     name="Show Product Tags"
     priority="300">
     <xpath expr="//div[@id='wrap']" position="inside">
-      <div class="container-fluid">
+      <div class="container">
         <t t-call="ayu_product_data.product_tags"/>
       </div>
     </xpath>

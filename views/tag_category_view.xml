@@ -81,11 +81,5 @@
       groups="base.group_no_one"
       sequence="25"/>
 
-    <menuitem
-      id="menu_website_product_tag_category"
-      action="ayu_product_data.action_tag_category"
-      parent="website_sale.menu_product_settings"
-      sequence="10"/>
-
   </data>
 </odoo>

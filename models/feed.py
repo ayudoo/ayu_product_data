@@ -1,9 +1,10 @@
 import io
 import logging
 from odoo import _, fields, models
-from odoo.addons.web.controllers.main import ExportXlsxWriter
+from odoo.addons.web.controllers.export import ExportXlsxWriter
 from odoo.tools import pycompat
 from odoo.tools.misc import xlsxwriter, get_lang
+
 
 _logger = logging.getLogger(__name__)
 
@@ -106,8 +107,16 @@ class Feed(models.Model):
                 [("ayu_product_feed_id", "=", record.id)], limit=1
             )
 
+    def _search_website_id(self):
+        return self.env["website"].search([
+            ("ayu_product_feed_id", "=", self.ids)
+        ])
+
     website_id = fields.Many2one(
-        "website", string="Website", compute=_compute_website_id
+        "website",
+        string="Website",
+        compute=_compute_website_id,
+        search=_search_website_id,
     )
 
     warehouse_id = fields.Many2one(

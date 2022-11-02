@@ -14,7 +14,7 @@
         (0,0,{'name': 'ayu_website_url', 'ayu_data_export_label': 'link'}),
         (0,0,{'name': 'ayu_image_url', 'ayu_data_export_label': 'image_link'}),
         (0,0,{'name': 'ayu_feed_availability', 'ayu_data_export_label': 'availability'}),
-        (0,0,{'name': 'price', 'ayu_data_export_label': 'price'}),
+        (0,0,{'name': 'ayu_contextual_price', 'ayu_data_export_label': 'price'}),
         (0,0,{'name': 'ayu_product_type_text_export', 'ayu_data_export_label': 'product_type'}),
         (0,0,{'name': 'ayu_google_category_id/identifier', 'ayu_data_export_label': 'google_category'}),
         (0,0,{'name': 'barcode', 'ayu_data_export_label': 'gtin'}),

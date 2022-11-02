@@ -55,6 +55,15 @@ Features:
         "views/res_config_settings_view.xml",
         "report/sale_report_view.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "ayu_product_data/static/src/scss/backend.scss",
+        ],
+        "web.assets_frontend": [
+            "ayu_product_data/static/src/scss/frontend.scss",
+            "ayu_product_data/static/src/js/product_color_select.js",
+        ],
+    },
     "application": True,
     "installable": True,
     "post_init_hook": "init_google_categories",

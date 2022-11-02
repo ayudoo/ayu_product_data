@@ -30,12 +30,13 @@
                   <button
                     name="action_generate_feed_files"
                     type="object"
-                    class="oe_link"
+                    class="oe_link p-0"
                     icon="fa-refresh"
+                    colspan="2"
                   >Refresh feed export files.</button>
-                </group>
-                <group>
-                  <div class="text-muted">The files are served under '/shop/feed/{filename}'</div>
+                  <div
+                    colspan="2"
+                    class="text-muted pb-3">The files are served under '/shop/feed/{filename}'</div>
                 </group>
                 <field name="attachment_ids">
                   <tree>

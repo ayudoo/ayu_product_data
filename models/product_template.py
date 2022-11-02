@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.osv import expression
 
 
 class ProductTemplate(models.Model):
@@ -10,7 +11,6 @@ class ProductTemplate(models.Model):
     # - default_code:   id
     # - barcode:        gtin
     # - website_url:    link
-    # - price:          price
 
     ayu_item_group_id = fields.Many2one(
         "ayu_product_data.item_group",
@@ -19,13 +19,18 @@ class ProductTemplate(models.Model):
         help="Used to group your products, similar to variants.",
     )
 
-    @api.model
+    @api.model_create_multi
     def create(self, values):
-        record = super().create(values)
-        if record.ayu_item_group_id:
-            record.ayu_item_group_id._update_product_templates(product_templates=record)
-        record._update_product_tags()
-        return record
+        records = super().create(values)
+
+        for record in records:
+            if record.ayu_item_group_id:
+                record.ayu_item_group_id._update_product_templates(
+                    product_templates=record
+                )
+            record._update_product_tags()
+
+        return records
 
     def write(self, values):
         old_values = self._get_old_values(values)
@@ -158,6 +163,16 @@ class ProductTemplate(models.Model):
         ],
     )
 
+    # price
+
+    def _compute_ayu_contextual_price(self):
+        for record in self:
+            record.ayu_contextual_price = record._get_contextual_price()
+
+    ayu_contextual_price = fields.Float(
+        'Price', compute=_compute_ayu_contextual_price, digits='Product Price',
+    )
+
     # product detail
 
     ayu_custom_product_detail_ids = fields.Many2many(
@@ -288,3 +303,18 @@ class ProductTemplate(models.Model):
         return self.ayu_prod_doc_rel_ids.filtered(
             lambda d: d.website_active and d.user_document_id.language_id.code == lang
         )
+
+    # search
+
+    @api.model
+    def _search_get_detail(self, website, order, options):
+        res = super()._search_get_detail(website, order, options)
+
+        tags = options.get('tags', None)
+        if tags:
+            res['base_domain'] = [
+                expression.AND([d, tags._get_tag_rel_domain_by_category()])
+                for d in res['base_domain']
+            ]
+
+        return res
