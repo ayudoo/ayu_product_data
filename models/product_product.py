@@ -50,7 +50,7 @@ class ProductProduct(models.Model):
         availibility_threshold = self.env.context.get("availibility_threshold", 0)
 
         for record in self:
-            if record.virtual_available <= availibility_threshold:
+            if record.free_qty <= availibility_threshold:
                 record.ayu_feed_availability = "out_of_stock"
             else:
                 record.ayu_feed_availability = "in_stock"
