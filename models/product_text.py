@@ -59,7 +59,13 @@ class ProductText(models.Model):
         + " it without removing it.",
     )
     identifier = fields.Char(translate=False, required=True)
-    content = fields.Html("Content", translate=True, required=True)
+    content = fields.Html(
+        "Content",
+        translate=True,
+        required=True,
+        sanitize_attributes=False,
+        sanitize_form=False,
+    )
 
     category_id = fields.Many2one(
         "ayu_product_data.product_text_category",
