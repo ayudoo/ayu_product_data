@@ -56,7 +56,7 @@
                 name="ayu_age_group_id"
                 options="{'no_create': True, 'no_create_edit':True}"
                 attrs="{'readonly': [('ig_has_ayu_age_group_id','=',True)]}"/>
-              <div colspan="2">
+              <!-- <div colspan="2">
                 <div class="font-weight-bold">
                   <label
                     for="public_categ_ids"
@@ -67,8 +67,10 @@
                   name="public_categ_ids"
                   nolabel='1'
                   attrs="{'readonly': [('ig_has_public_categ_ids','=',True)]}"/>
+              </div> -->
+              <div colspan="2">
                 <div class="font-weight-bold">
-                  <label for="ayu_google_category_id" class="font-weight-bold m-0"/>:
+                  <label for="ayu_google_category_id" class="font-weight-bold"/>:
                 </div>
                 <field
                   name="ayu_google_category_id"
