@@ -89,12 +89,5 @@
       parent="ayu_product_data.menu_product_data"
       sequence="50"/>
 
-    <menuitem
-      id="menu_website_product_tag"
-      action="ayu_product_data.action_tag"
-      name="Tags"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="50"/>
-
   </data>
 </odoo>

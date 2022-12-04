@@ -171,12 +171,6 @@
     id="menu_product_data"
     name="Product Data"
     parent="sale.product_menu_catalog"
-    sequence="10"/>
-
-  <menuitem
-    id="menu_website_product_data"
-    name="Product Data"
-    parent="website_sale.menu_catalog"
-    sequence="10"/>
+    sequence="90"/>
 
 </odoo>

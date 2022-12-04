@@ -145,12 +145,6 @@
       name="Item Groups"
       parent="ayu_product_data.menu_product_data"
       sequence="4"/>
-    <menuitem
-      id="menu_website_product_item_group"
-      action="ayu_product_data.action_item_group"
-      name="Item Groups"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="4"/>
 
   </data>
 </odoo>

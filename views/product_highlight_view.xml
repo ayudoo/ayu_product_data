@@ -64,12 +64,6 @@
       name="Product Highlights"
       parent="ayu_product_data.menu_product_data"
       sequence="21"/>
-    <menuitem
-      id="menu_website_product_product_highlight"
-      action="ayu_product_data.action_product_highlight"
-      name="Product Highlights"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="21"/>
 
   </data>
 </odoo>

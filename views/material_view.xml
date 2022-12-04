@@ -105,12 +105,6 @@
       name="Materials"
       parent="ayu_product_data.menu_product_data"
       sequence="10"/>
-    <menuitem
-      id="menu_website_product_material"
-      action="ayu_product_data.action_material"
-      name="Materials"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="10"/>
 
   </data>
 </odoo>

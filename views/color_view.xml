@@ -114,12 +114,6 @@
       name="Colors"
       parent="ayu_product_data.menu_product_data"
       sequence="6"/>
-    <menuitem
-      id="menu_website_product_color"
-      action="ayu_product_data.action_color"
-      name="Colors"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="6"/>
 
   </data>
 </odoo>

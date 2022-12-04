@@ -137,12 +137,6 @@
       name="Product Details"
       parent="ayu_product_data.menu_product_data"
       sequence="20"/>
-    <menuitem
-      id="menu_website_product_product_detail"
-      action="ayu_product_data.action_product_detail"
-      name="Product Details"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="20"/>
 
   </data>
 </odoo>

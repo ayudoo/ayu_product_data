@@ -72,12 +72,6 @@
       name="Product Texts"
       parent="ayu_product_data.menu_product_data"
       sequence="14"/>
-    <menuitem
-      id="menu_website_product_product_text"
-      action="ayu_product_data.action_product_text"
-      name="Product Texts"
-      parent="ayu_product_data.menu_website_product_data"
-      sequence="14"/>
 
   </data>
 </odoo>
