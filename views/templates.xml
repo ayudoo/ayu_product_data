@@ -16,7 +16,7 @@
         t-attf-class="collapse #{'show' if show else ''}"
         t-att-id='body_id'
         data-bs-parent="#product_texts">
-        <t t-raw="0"/>
+        <t t-out="0"/>
         <div t-field="product_text.content"/>
         <br/>
       </div>
