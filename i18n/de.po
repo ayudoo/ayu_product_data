@@ -16,6 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: ayu_product_data
+#. odoo-python
 #: code:addons/ayu_product_data/models/age_group.py:0
 #: code:addons/ayu_product_data/models/color.py:0
 #: code:addons/ayu_product_data/models/condition.py:0
@@ -288,7 +289,6 @@ msgstr "Farbe:"
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__color_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_color
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_color
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
 msgid "Colors"
 msgstr "Farben"
@@ -318,7 +318,7 @@ msgstr "Zustandssuche"
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Konfigurationseinstellungen"
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
@@ -332,10 +332,13 @@ msgid "Content"
 msgstr "Inhalt"
 
 #. module: ayu_product_data
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_country_of_origin_id
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_country_of_origin_id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_country_of_origin_id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_contextual_price
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_contextual_price
+msgid "Contextual Price"
+msgstr "Kontextabhängiger Preis"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__country_of_origin
 msgid "Country of Origin"
 msgstr "Ursprungsland"
 
@@ -418,6 +421,10 @@ msgstr "Beschreibungs-Produktvorlagen"
 
 #. module: ayu_product_data
 #: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_detail
+msgid "Detail"
+msgstr ""
+
+#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
 msgid "Details"
@@ -425,7 +432,6 @@ msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__display_name
@@ -442,15 +448,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__display_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__display_name
-#: model:ir.model.fields,field_description:ayu_product_data.field_website__display_name
 msgid "Display Name"
 msgstr "Anzeigename"
 
@@ -462,7 +460,6 @@ msgstr "Dokument"
 #. module: ayu_product_data
 #: model:ir.actions.act_window,name:ayu_product_data.action_user_document
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_user_document
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_user_document
 msgid "Documents"
 msgstr "Dokument"
 
@@ -532,6 +529,11 @@ msgstr ""
 "Lager'."
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_website_url
+msgid "Full Website URL"
+msgstr "Vollständige URL"
+
+#. module: ayu_product_data
 #: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_gender
 #: model:ir.actions.act_window,name:ayu_product_data.action_gender
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_gender
@@ -556,6 +558,11 @@ msgstr "Geschlechtersuche"
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
 msgid "General"
 msgstr "Allgemein"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
+msgid "Google Merchant Center Help"
+msgstr "Google Merchant Center Hilfe"
 
 #. module: ayu_product_data
 #: model:ir.actions.act_window,name:ayu_product_data.action_google_category
@@ -608,7 +615,6 @@ msgstr "Helfer-Feld, um das Land des Kontextes zu sehen."
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__id
@@ -625,15 +631,7 @@ msgstr "Helfer-Feld, um das Land des Kontextes zu sehen."
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report__id
-#: model:ir.model.fields,field_description:ayu_product_data.field_website__id
 msgid "ID"
 msgstr ""
 
@@ -690,12 +688,6 @@ msgid "Ig Has Ayu Condition"
 msgstr ""
 
 #. module: ayu_product_data
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_country_of_origin_id
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_country_of_origin_id
-msgid "Ig Has Ayu Country Of Origin"
-msgstr ""
-
-#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_ayu_description_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_ayu_description_id
 msgid "Ig Has Ayu Description"
@@ -738,6 +730,12 @@ msgid "Ig Has Ayu Product Text"
 msgstr ""
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_country_of_origin
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_country_of_origin
+msgid "Ig Has Country Of Origin"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_public_categ_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_public_categ_ids
 msgid "Ig Has Public Categ"
@@ -747,6 +745,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_image_url
 msgid "Image URL"
 msgstr "Bild-URL"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_image_url_small
+msgid "Image URL Small"
+msgstr "Bild-URL (klein)"
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
@@ -807,7 +810,6 @@ msgstr "Artikelgruppensuche"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__item_group_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__item_group_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_item_group
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_item_group
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_age_group_form
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_condition_form
@@ -828,7 +830,6 @@ msgstr "Sprache"
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed____last_update
@@ -845,15 +846,7 @@ msgstr "Sprache"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable____last_update
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_user_document____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_ir_exports_line____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_product____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_product_template____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_sale_report____last_update
-#: model:ir.model.fields,field_description:ayu_product_data.field_website____last_update
 msgid "Last Modified on"
 msgstr "Zuletzt geändert am"
 
@@ -923,6 +916,7 @@ msgid "Lines"
 msgstr "Linien"
 
 #. module: ayu_product_data
+#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_material
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_material
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_material_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_material_id
@@ -948,7 +942,6 @@ msgstr "Materialsuche"
 #: model:ir.actions.act_window,name:ayu_product_data.action_material
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__material_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_material
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_material
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_form
 msgid "Materials"
 msgstr "Materialien"
@@ -1004,6 +997,14 @@ msgstr ""
 "ändern. Mit Vorsicht nutzen."
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_country_of_origin_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_country_of_origin_id
+msgid "Obsolete Country of Origin"
+msgstr "Ursprungsland (veraltet)"
+
+#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_form
 msgid "Options"
 msgstr "Optionen"
@@ -1035,7 +1036,7 @@ msgid "Parent Category"
 msgstr "Elternkategorie"
 
 #. module: ayu_product_data
-#: model:ir.model,name:ayu_product_data.model_product_product
+#: model:ir.model,name:ayu_product_data.model_product_template
 msgid "Product"
 msgstr "Produkt"
 
@@ -1063,7 +1064,6 @@ msgstr "Produktzustand"
 
 #. module: ayu_product_data
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_data
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
 msgid "Product Data"
@@ -1083,7 +1083,6 @@ msgstr "Produktdaten-Feed"
 #. module: ayu_product_data
 #: model:ir.actions.server,name:ayu_product_data.ir_cron_generate_feed_files_ir_actions_server
 #: model:ir.cron,cron_name:ayu_product_data.ir_cron_generate_feed_files
-#: model:ir.cron,name:ayu_product_data.ir_cron_generate_feed_files
 msgid "Product Data: generate feed files"
 msgstr "Produktdaten: Feed-Dateien generieren"
 
@@ -1115,7 +1114,6 @@ msgstr "Produktdetailsuche"
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_custom_product_detail_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_custom_product_detail_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_product_detail
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_detail
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_detail_tree
 msgid "Product Details"
 msgstr "Produktdetails"
@@ -1127,6 +1125,7 @@ msgid "Product Details Text Export"
 msgstr "Produktdetails Textexport"
 
 #. module: ayu_product_data
+#. odoo-python
 #: code:addons/ayu_product_data/models/res_config_settings.py:0
 #, python-format
 msgid "Product Feed"
@@ -1165,7 +1164,6 @@ msgstr "Produkt-Highlight-Suche"
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_product_highlight_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_product_highlight_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_product_highlight
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_highlight
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_highlight_tree
 msgid "Product Highlights"
 msgstr "Produkt-Highlights"
@@ -1187,7 +1185,6 @@ msgstr "Produktlinie"
 #. module: ayu_product_data
 #: model:ir.actions.act_window,name:ayu_product_data.action_product_line
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_product_line
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_line
 msgid "Product Lines"
 msgstr "Produktlinien"
 
@@ -1235,7 +1232,6 @@ msgid "Product Tags"
 msgstr "Produkt-Tags"
 
 #. module: ayu_product_data
-#: model:ir.model,name:ayu_product_data.model_product_template
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__product_template_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__product_template_id
 msgid "Product Template"
@@ -1298,7 +1294,6 @@ msgstr "Produkttextsuche"
 #. module: ayu_product_data
 #: model:ir.actions.act_window,name:ayu_product_data.action_product_text
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_product_text
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_product_text
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_tree
 msgid "Product Texts"
 msgstr "Produkttexte"
@@ -1310,10 +1305,16 @@ msgid "Product data specification help URL"
 msgstr "Produktdatenspezifikations-Url"
 
 #. module: ayu_product_data
+#. odoo-python
 #: code:addons/ayu_product_data/models/feed.py:0
 #, python-format
 msgid "Products"
 msgstr "Produkte"
+
+#. module: ayu_product_data
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
+msgid "Published"
+msgstr "Veröffentlicht"
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
@@ -1351,7 +1352,7 @@ msgstr "Verknüpfung zwischen Tags und Produkten"
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_sale_report
 msgid "Sales Analysis Report"
-msgstr ""
+msgstr "Verkaufsanalysebericht"
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_detail__section_name
@@ -1412,7 +1413,6 @@ msgstr "Tag-Zuweisung"
 #. module: ayu_product_data
 #: model:ir.actions.act_window,name:ayu_product_data.action_tag_category
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_tag_category
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_tag_category
 msgid "Tag Categories"
 msgstr "Tag-Kategorien"
 
@@ -1464,18 +1464,13 @@ msgstr "Tag-bar Mixin"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__tag_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__tag_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_tag
-#: model:ir.ui.menu,name:ayu_product_data.menu_website_product_tag
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_tag_category_form
 msgid "Tags"
 msgstr ""
 
 #. module: ayu_product_data
-#: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_material
-msgid "Textiles"
-msgstr "Textilien"
-
-#. module: ayu_product_data
+#. odoo-python
 #: code:addons/ayu_product_data/models/product_text.py:0
 #, python-format
 msgid "The description category cannot be deleted"
@@ -1630,6 +1625,11 @@ msgid "User Documents"
 msgstr "Nutzerdokumente"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__warehouse_id
+msgid "Warehouse"
+msgstr "Lagerhaus"
+
+#. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_website
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_feed__website_id
 msgid "Website"
@@ -1670,7 +1670,6 @@ msgstr "eCommerce-Kategorien als product_type"
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__public_categ_ids
-#: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_item_group_form
 msgid "eCommerce Category / Product Type"
 msgstr "eCommerce-Kategorie / Produkttyp"

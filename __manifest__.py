@@ -23,6 +23,9 @@ Features:
         "base",
         # product dependency by sale, payment, account
         "website_sale_stock",
+        # absolutly not happy with this dependency, but to incorporate
+        # country_of_origin, we have to.
+        "delivery",
     ],
     "data": [
         "security/ir.model.access.csv",

@@ -35,6 +35,11 @@ class ItemGroup(models.Model):
         ),
     )
 
+    country_of_origin = fields.Many2one(
+        "res.country",
+        string="Country of Origin",
+    )
+
     def write(self, values):
         old_values = {}
         if "custom_detail_ids" in values:

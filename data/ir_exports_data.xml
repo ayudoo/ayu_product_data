@@ -27,7 +27,8 @@
         (0,0,{'name': 'ayu_gender_id/identifier', 'ayu_data_export_label': 'gender'}),
         (0,0,{'name': 'ayu_product_detail_text_export', 'ayu_data_export_label': 'product_detail'}),
         (0,0,{'name': 'ayu_product_highlight_text_export', 'ayu_data_export_label': 'product_highlight'}),
-        (0,0,{'name': 'company_id/name', 'ayu_data_export_label': 'brand'})
+        (0,0,{'name': 'company_id/name', 'ayu_data_export_label': 'brand'}),
+        (0,0,{'name': 'country_of_origin/name', 'ayu_data_export_label': 'country_of_origin'})
       ]"/>
     </record>
 

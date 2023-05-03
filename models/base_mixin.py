@@ -90,9 +90,10 @@ class BaseMixin(models.AbstractModel):
         string="Product Highlights",
     )
 
+    # TODO remove this after migration
     ayu_country_of_origin_id = fields.Many2one(
         "res.country",
-        string="Country of Origin",
+        string="Obsolete Country of Origin",
     )
 
     @classmethod
@@ -107,7 +108,7 @@ class BaseMixin(models.AbstractModel):
             "ayu_condition_id",
             "ayu_description_id",
             "ayu_product_text_ids",
-            "public_categ_ids",
             "ayu_product_highlight_ids",
-            "ayu_country_of_origin_id",
+            "public_categ_ids",
+            "country_of_origin",
         ]

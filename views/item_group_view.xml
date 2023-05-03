@@ -42,7 +42,7 @@
                     <field name="ayu_color_id"/>
                     <field name="ayu_material_id"/>
                     <field name="ayu_condition_id" options="{'no_create': True, 'no_create_edit':True}"/>
-                    <field name="ayu_country_of_origin_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                    <field name="country_of_origin" options="{'no_create': True, 'no_create_edit': True}"/>
                   </group>
                   <group name="product_data_audience" string="Audience / Categories">
                     <field name="ayu_gender_id" options="{'no_create': True, 'no_create_edit':True}"/>

@@ -41,7 +41,7 @@ class ProductTemplate(models.Model):
     @classmethod
     def _get_tagged_data_fields(cls):
         fields = cls._get_base_data_fields()
-        fields.remove("ayu_country_of_origin_id")
+        fields.remove("country_of_origin")
         return fields + [
             "ayu_item_group_id",
             "ayu_custom_product_detail_ids",
@@ -143,7 +143,7 @@ class ProductTemplate(models.Model):
         compute=_compute_item_group_base_data
     )
 
-    ig_has_ayu_country_of_origin_id = fields.Boolean(
+    ig_has_country_of_origin = fields.Boolean(
         compute=_compute_item_group_base_data
     )
 
@@ -170,7 +170,7 @@ class ProductTemplate(models.Model):
             record.ayu_contextual_price = record._get_contextual_price()
 
     ayu_contextual_price = fields.Float(
-        'Price', compute=_compute_ayu_contextual_price, digits='Product Price',
+        'Contextual Price', compute=_compute_ayu_contextual_price, digits='Product Price',
     )
 
     # product detail
