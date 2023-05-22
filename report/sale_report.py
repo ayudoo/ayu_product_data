@@ -52,16 +52,16 @@ class SaleReport(models.Model):
         readonly=True,
     )
 
-    def _select_additional_res(self):
-        res = super()._select_additional_res()
-        res["ayu_google_category_id"] = "t.ayu_google_category_id as ayu_google_category_id"
-        res["ayu_line_id"] = "t.ayu_line_id as ayu_line_id"
-        res["ayu_color_id"] = "t.ayu_color_id as ayu_color_id"
-        res["ayu_gender_id"] = "t.ayu_gender_id as ayu_gender_id"
-        res["ayu_age_group_id"] = "t.ayu_age_group_id as ayu_age_group_id"
-        res["ayu_material_id"] = "t.ayu_material_id as ayu_material_id"
-        res["ayu_condition_id"] = "t.ayu_condition_id as ayu_condition_id"
-        res["ayu_item_group_id"] = "t.ayu_item_group_id as ayu_item_group_id"
+    def _select_additional_fields(self):
+        res = super()._select_additional_fields()
+        res["ayu_google_category_id"] = "t.ayu_google_category_id"
+        res["ayu_line_id"] = "t.ayu_line_id"
+        res["ayu_color_id"] = "t.ayu_color_id"
+        res["ayu_gender_id"] = "t.ayu_gender_id"
+        res["ayu_age_group_id"] = "t.ayu_age_group_id"
+        res["ayu_material_id"] = "t.ayu_material_id"
+        res["ayu_condition_id"] = "t.ayu_condition_id"
+        res["ayu_item_group_id"] = "t.ayu_item_group_id"
         return res
 
     def _group_by_sale(self):
