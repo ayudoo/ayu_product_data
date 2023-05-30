@@ -17,7 +17,7 @@ class ProductProduct(models.Model):
     )
 
     def _compute_ayu_image_url(self):
-        base_url = self.env["ir.config_parameter"].get_param("web.base.url")
+        base_url = self.env["ir.config_parameter"].sudo().get_param("web.base.url")
         website_id = self.env.context.get("website_id")
         if website_id:
             website = self.env["website"].browse(website_id)
