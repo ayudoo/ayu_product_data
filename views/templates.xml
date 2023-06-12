@@ -108,10 +108,10 @@
           itemprop="url"
           t-att-href="keep('/shop/product/%s' % slug(other_product))"
           t-attf-class="product-color-btn product-color-select-tooltip #{'active' if product.id == other_product.id else ''}"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          data-delay='{"show":"0"}'
-          title=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          data-bs-config='{"delay":0}'
+          t-att-title="color.display_name"
           t-att-data-original-title="color.display_name"
           t-att-data-publish="other_product.website_published and 'on' or 'off'">
           <div
