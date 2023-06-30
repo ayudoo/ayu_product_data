@@ -18,6 +18,7 @@
               text="Google Merchant Center Help"/>
           </div>
           <group>
+            <field name="can_edit_product_data" invisible="1"/>
             <field name="ig_has_ayu_line_id" invisible="1"/>
             <field name="ig_has_ayu_color_id" invisible="1"/>
             <field name="ig_has_ayu_material_id" invisible="1"/>
@@ -32,7 +33,7 @@
 
             <group name="product_data_specs" string="General">
               <field name="ayu_line_id" attrs="{'readonly': [('ig_has_ayu_line_id','=',True)]}"/>
-              <field name="ayu_item_group_id"/>
+              <field name="ayu_item_group_id" attrs="{'readonly': [('can_edit_product_data','=',False)]}"/>
               <field name="ayu_color_id" attrs="{'readonly': [('ig_has_ayu_color_id','=',True)]}"/>
               <field
                 name="ayu_material_id"
@@ -95,7 +96,8 @@
               <field
                 name="ayu_custom_product_detail_ids"
                 widget="many2many_tags"
-                domain="[('id','not in',ayu_implied_product_detail_ids)]"/>
+                domain="[('id','not in',ayu_implied_product_detail_ids)]"
+                attrs="{'readonly': [('can_edit_product_data','=',False)]}"/>
             </div>
             <field
               name="ayu_product_highlight_ids"
@@ -111,7 +113,7 @@
                     string="Related Documents"
                     class="font-weight-bold"/>
                 </div>
-                <field name="ayu_prod_doc_rel_ids">
+                <field name="ayu_prod_doc_rel_ids" attrs="{'readonly': [('can_edit_product_data','=',False)]}">
                   <form>
                     <group>
                       <field name="user_document_id" string="Document"/>
@@ -136,7 +138,7 @@
                 <div>
                   <label for="ayu_tag_rel_ids" string="Tags" class="font-weight-bold"/>
                 </div>
-                <field name="ayu_tag_rel_ids">
+                <field name="ayu_tag_rel_ids" attrs="{'readonly': [('can_edit_product_data','=',False)]}">
                   <tree editable="bottom" delete="false">
                     <field
                       name="tag_id"

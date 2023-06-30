@@ -113,7 +113,17 @@ class ProductTemplate(models.Model):
 
     @api.onchange("ayu_item_group_id")
     def _compute_item_group_base_data(self):
+        model = self.env.context.get('params') and self.env.context.get('params').get(
+            'model'
+        )
+        if model == "product.product":
+            self.can_edit_product_data = False
+            for field_name in self._get_base_data_fields():
+                setattr(self, "ig_has_{}".format(field_name), True)
+            return
+
         for record in self:
+            record.can_edit_product_data = True
             if record.ayu_item_group_id:
                 ig = record.ayu_item_group_id
                 for field_name in self._get_base_data_fields():
@@ -126,6 +136,8 @@ class ProductTemplate(models.Model):
             else:
                 for field_name in self._get_base_data_fields():
                     setattr(record, "ig_has_{}".format(field_name), False)
+
+    can_edit_product_data = fields.Boolean(compute=_compute_item_group_base_data)
 
     ig_has_ayu_google_category_id = fields.Boolean(
         compute=_compute_item_group_base_data
