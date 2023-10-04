@@ -179,6 +179,13 @@ class ProductTemplate(models.Model):
 
     def _compute_ayu_contextual_price(self):
         for record in self:
+            pricelist = record._get_contextual_pricelist()
+            if not pricelist:
+                public_user = self.env.company._get_public_user()
+                record = record.with_context(
+                    pricelist=public_user.property_product_pricelist.id
+                )
+
             record.ayu_contextual_price = record._get_contextual_price()
 
     ayu_contextual_price = fields.Float(
