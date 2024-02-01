@@ -14,6 +14,7 @@ from . import (
     product_detail,
     product_highlight,
     product_product,
+    product_category,
     product_public_category,
     product_template,
     product_text,

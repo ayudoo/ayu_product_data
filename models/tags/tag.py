@@ -46,7 +46,7 @@ class ProductTagRel(models.Model):
             ("ayu_product_data.material", "ayu_product_data.material"),
             ("ayu_product_data.condition", "ayu_product_data.condition"),
             ("ayu_product_data.product_text", "ayu_product_data.product_text"),
-            ("ayu_product_data.product_text", "ayu_product_data.product_text"),
+            ("product.category", "product.category"),
             ("product.public.category", "product.public.category"),
             ("ayu_product_data.product_detail", "ayu_product_data.product_detail"),
             (
@@ -65,7 +65,8 @@ class ProductTagRel(models.Model):
                     )
                 elif model_name == "product_public_category":
                     model_name = "product.public.category"
-
+                elif model_name == "product_category":
+                    model_name = "product.category"
                 record.source_data_ref = "{},{}".format(
                     model_name, record.source_data_id
                 )

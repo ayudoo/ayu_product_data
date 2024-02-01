@@ -109,6 +109,7 @@ class BaseMixin(models.AbstractModel):
             "ayu_description_id",
             "ayu_product_text_ids",
             "ayu_product_highlight_ids",
+            "categ_id",
             "public_categ_ids",
             "country_of_origin",
         ]

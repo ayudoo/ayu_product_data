@@ -23,7 +23,7 @@ Features:
         "base",
         # product dependency by sale, payment, account
         "website_sale_stock",
-        # absolutly not happy with this dependency, but to incorporate
+        # absolutely not happy with this dependency, but to incorporate
         # country_of_origin, we have to.
         "delivery",
     ],
@@ -44,6 +44,7 @@ Features:
         "views/line_view.xml",
         "views/color_view.xml",
         "views/material_view.xml",
+        "views/product_category_view.xml",
         "views/product_detail_view.xml",
         "views/product_highlight_view.xml",
         "views/product_text_view.xml",

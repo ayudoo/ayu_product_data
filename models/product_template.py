@@ -151,6 +151,7 @@ class ProductTemplate(models.Model):
     ig_has_ayu_description_id = fields.Boolean(compute=_compute_item_group_base_data)
     ig_has_ayu_product_text_ids = fields.Boolean(compute=_compute_item_group_base_data)
     ig_has_public_categ_ids = fields.Boolean(compute=_compute_item_group_base_data)
+    ig_has_categ_id = fields.Boolean(compute=_compute_item_group_base_data)
     ig_has_ayu_product_highlight_ids = fields.Boolean(
         compute=_compute_item_group_base_data
     )
@@ -185,6 +186,7 @@ class ProductTemplate(models.Model):
                 record = record.with_context(
                     pricelist=public_user.property_product_pricelist.id
                 )
+                record = product.with_context(                    pricelist=public_user.property_product_pricelist.id                )
 
             record.ayu_contextual_price = record._get_contextual_price()
 

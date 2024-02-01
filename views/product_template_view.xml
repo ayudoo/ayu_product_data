@@ -6,6 +6,9 @@
     <field name="model">product.template</field>
     <field name="inherit_id" ref="product.product_template_form_view"/>
     <field name="arch" type="xml">
+      <field name="categ_id" position='attributes'>
+        <attribute name="attrs">{'readonly': [('ig_has_categ_id','=',True)]}</attribute>
+      </field>
       <field name="public_categ_ids" position='attributes'>
         <attribute name="attrs">{'readonly': [('ig_has_public_categ_ids','=',True)]}</attribute>
       </field>
@@ -25,6 +28,7 @@
             <field name="ig_has_ayu_condition_id" invisible="1"/>
             <field name="ig_has_ayu_gender_id" invisible="1"/>
             <field name="ig_has_ayu_age_group_id" invisible="1"/>
+            <field name="ig_has_categ_id" invisible="1"/>
             <field name="ig_has_public_categ_ids" invisible="1"/>
             <field name="ig_has_ayu_google_category_id" invisible="1"/>
             <field name="ig_has_ayu_description_id" invisible="1"/>
@@ -147,7 +151,7 @@
                     <field
                       name="source_data_ref"
                       widget="reference"
-                      string="Origin Data Field"
+                      string="Origin"
                       readonly="1"/>
                     <button
                       name="unlink"

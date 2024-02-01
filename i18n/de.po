@@ -188,6 +188,7 @@ msgid "Archived"
 msgstr ""
 
 #. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__categ_id
 #: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__public_categ_ids
 msgid ""
 "Assign categories to this item group to replace the products' categories."
@@ -237,6 +238,12 @@ msgstr "Verfügbarkeits-Schwelle"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__bright_color
 msgid "Bright Color"
 msgstr "Helle Farbe"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__can_edit_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__can_edit_product_data
+msgid "Can Edit Product Data"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__category_id
@@ -730,6 +737,12 @@ msgid "Ig Has Ayu Product Text"
 msgstr ""
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_categ_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_categ_id
+msgid "Ig Has Categ"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ig_has_country_of_origin
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ig_has_country_of_origin
 msgid "Ig Has Country Of Origin"
@@ -1039,6 +1052,12 @@ msgstr "Elternkategorie"
 #: model:ir.model,name:ayu_product_data.model_product_template
 msgid "Product"
 msgstr "Produkt"
+
+#. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_category
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__categ_id
+msgid "Product Category"
+msgstr "Produktkategorie"
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_color_form
@@ -1429,6 +1448,7 @@ msgstr "Tag-Kategorien"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_highlight__tag_category_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__tag_category_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__tag_category_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_category__tag_category_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__tag_category_id
 msgid "Tag Category"
 msgstr "Tag-Kategorie"
@@ -1462,6 +1482,7 @@ msgstr "Tag-bar Mixin"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__tag_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_tag_category__tag_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_taggable__tag_ids
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_category__tag_ids
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__tag_ids
 #: model:ir.ui.menu,name:ayu_product_data.menu_product_tag
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view

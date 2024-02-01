@@ -47,6 +47,7 @@
                   <group name="product_data_audience" string="Audience / Categories">
                     <field name="ayu_gender_id" options="{'no_create': True, 'no_create_edit':True}"/>
                     <field name="ayu_age_group_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="categ_id" options="{'no_create': True, 'no_create_edit':True}"/>
                     <div colspan="2">
                       <div style="font-weight: bold;">
                         <label
