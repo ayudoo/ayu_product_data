@@ -1,8 +1,34 @@
 from odoo import _, api, fields, models
 
+TRACKING_FIELDS = [
+    "tag_ids",
+    "ayu_google_category_id",
+    "ayu_line_id",
+    "ayu_color_id",
+    "ayu_gender_id",
+    "ayu_age_group_id",
+    "ayu_material_id",
+    "ayu_condition_id",
+    "ayu_description_id",
+    "ayu_product_text_ids",
+    "ayu_product_highlight_ids",
+    "identifier",
+    "name",
+    "categ_id",
+    "public_categ_ids",
+    "country_of_origin",
+    "custom_detail_ids",
+    "ayu_product_highlight_ids",
+]
+
 
 class ItemGroup(models.Model):
-    _inherit = ["ayu_product_data.base_mixin", "ayu_product_data.taggable"]
+    _inherit = [
+        "mail.thread",
+        "mail.activity.mixin",
+        "ayu_product_data.base_mixin",
+        "ayu_product_data.taggable",
+    ]
     _name = "ayu_product_data.item_group"
     _description = "Item Group"
     _order = "identifier"
@@ -184,3 +210,7 @@ class ItemGroup(models.Model):
         default = dict(default or {})
         default.update(identifier=_("%s (copy)") % (self.identifier or ""))
         return super().copy(default)
+
+    def _track_get_fields(self):
+        model_fields = TRACKING_FIELDS
+        return model_fields and set(self.fields_get(model_fields, attributes=()))
