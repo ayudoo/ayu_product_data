@@ -54,7 +54,6 @@ class ItemGroup(models.Model):
 
     categ_id = fields.Many2one(
         'product.category',
-        relation="ayu_product_data_item_group_product_categ_rel",
         string='Product Category',
         help=(
             "Assign categories to this item group to replace the products' categories."
