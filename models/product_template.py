@@ -186,7 +186,6 @@ class ProductTemplate(models.Model):
                 record = record.with_context(
                     pricelist=public_user.property_product_pricelist.id
                 )
-                record = product.with_context(                    pricelist=public_user.property_product_pricelist.id                )
 
             record.ayu_contextual_price = record._get_contextual_price()
 
