@@ -339,6 +339,12 @@ msgid "Content"
 msgstr "Inhalt"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_contextual_currency_id
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_contextual_currency_id
+msgid "Contextual Currency"
+msgstr "Kontextabhängige Währung"
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_contextual_price
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_contextual_price
 msgid "Contextual Price"

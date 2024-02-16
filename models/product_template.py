@@ -183,14 +183,20 @@ class ProductTemplate(models.Model):
             pricelist = record._get_contextual_pricelist()
             if not pricelist:
                 public_user = self.env.company._get_public_user()
+                pricelist = public_user.property_product_pricelist
                 record = record.with_context(
-                    pricelist=public_user.property_product_pricelist.id
+                    pricelist=pricelist.id
                 )
 
             record.ayu_contextual_price = record._get_contextual_price()
+            record.ayu_contextual_currency_id = pricelist.currency_id
 
     ayu_contextual_price = fields.Float(
         'Contextual Price', compute=_compute_ayu_contextual_price, digits='Product Price',
+    )
+
+    ayu_contextual_currency_id = fields.Many2one(
+        'res.currency', 'Contextual Currency', compute=_compute_ayu_contextual_price,
     )
 
     # product detail
