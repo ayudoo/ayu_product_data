@@ -128,7 +128,7 @@ class ProductTemplate(models.Model):
                 ig = record.ayu_item_group_id
                 for field_name in self._get_base_data_fields():
                     data_id = getattr(ig, field_name)
-                    if data_id:
+                    if data_id and getattr(record, field_name) == data_id:
                         setattr(record, field_name, data_id)
                         setattr(record, "ig_has_{}".format(field_name), True)
                     else:
