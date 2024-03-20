@@ -13,6 +13,7 @@ class ResConfigSettings(models.TransientModel):
     )
 
     ayu_product_feed_interval_number = fields.Integer(
+        string="Product Feed Interval Number",
         default=1,
         help="Product Feed Repeat every x.",
         related="ayu_product_feed_ir_cron_id.interval_number",

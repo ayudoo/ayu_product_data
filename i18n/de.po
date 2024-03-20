@@ -1157,6 +1157,11 @@ msgid "Product Feed"
 msgstr "Produkt-Feed"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
+msgid "Product Feed Interval Number"
+msgstr "Produkt-Feed Intervall"
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_type
 msgid "Product Feed Interval Unit"
 msgstr "Produkt-Feed Intervall-Einheit"
