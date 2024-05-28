@@ -1,6 +1,6 @@
 from odoo import _, fields, models
 from odoo.exceptions import UserError
-from odoo.tools import html2plaintext
+from odoo.tools import html2plaintext,html_translate
 
 
 class ProductTextCategory(models.Model):
@@ -59,8 +59,14 @@ class ProductText(models.Model):
         + " it without removing it.",
     )
     identifier = fields.Char(translate=False, required=True)
-    content = fields.Html("Content", translate=True, required=True)
-
+    content = fields.Html(
+        "Content",
+        required=True,
+        translate=html_translate,
+        sanitize_overridable=True,
+        sanitize_attributes=False,
+        sanitize_form=False,
+    )
     category_id = fields.Many2one(
         "ayu_product_data.product_text_category",
         string="Category",
