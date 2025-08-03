@@ -123,7 +123,6 @@ class ProductTemplate(models.Model):
             return
 
         for record in self:
-            record.can_edit_product_data = True
             if record.ayu_item_group_id:
                 ig = record.ayu_item_group_id
                 for field_name in self._get_base_data_fields():
@@ -136,6 +135,7 @@ class ProductTemplate(models.Model):
             else:
                 for field_name in self._get_base_data_fields():
                     setattr(record, "ig_has_{}".format(field_name), False)
+            record.can_edit_product_data = True
 
     can_edit_product_data = fields.Boolean(compute=_compute_item_group_base_data)
 
