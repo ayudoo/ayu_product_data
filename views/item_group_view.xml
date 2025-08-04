@@ -87,7 +87,7 @@
                     </div>
                     <field name="ayu_product_highlight_ids" widget="many2many_tags"/>
                   </group>
-                  <group string="Shop">
+                  <group name="ecommerce" string="Shop">
                     <field name="tag_category_id" invisible="1"/>
                     <field
                       name="tag_ids"
