@@ -8,6 +8,7 @@
       <field name="arch" type="xml">
         <search string="Product Text Category Search">
           <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <filter string="Show in Product Page" name="show_in_product_page" domain="[('show_in_product_page','=',True)]"/>
           <field name="name"/>
         </search>
       </field>
@@ -29,6 +30,7 @@
             <group>
               <group>
                 <field name="name"/>
+                <field name="show_in_product_page"/>
               </group>
             </group>
           </sheet>
@@ -44,6 +46,7 @@
         <tree string="Product Text Categories">
           <field name="sequence" widget="handle"/>
           <field name="name"/>
+          <field name="show_in_product_page" widget="boolean_toggle"/>
         </tree>
       </field>
     </record>

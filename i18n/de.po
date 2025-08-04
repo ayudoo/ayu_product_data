@@ -85,6 +85,11 @@ msgstr ""
 "Standardeinstellungen."
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_activation
 msgid "Activate Feed"
 msgstr "Feed aktivieren"
@@ -120,6 +125,26 @@ msgstr ""
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__website_active
 msgid "Active on Website"
 msgstr "Aktiv auf der Website"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_age_group
@@ -202,6 +227,11 @@ msgid "Assigning values here, will set them in all related product templates."
 msgstr ""
 "Hier zugewiesene Werte ersetzten die Werte auf den verknüpfen "
 "Produktvorlagen."
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
@@ -530,6 +560,21 @@ msgid "Filename"
 msgstr "Dateiname"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 msgid "For more information, see"
 msgstr "Für mehr Informationen, siehe"
@@ -616,6 +661,11 @@ msgid "Group By"
 msgstr "Gruppieren Nach"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__bright_color
 msgid "Helper field to make the color select more visible for bright colors."
 msgstr ""
@@ -649,6 +699,16 @@ msgid "ID"
 msgstr ""
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__identifier
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_color__identifier
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_condition__identifier
@@ -658,6 +718,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__identifier
 msgid "Identifier"
 msgstr "Bezeichner"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__message_has_error
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_age_group__active
@@ -791,9 +862,9 @@ msgid "Implied Product Details"
 msgstr "Abgeleitete Produktdetails"
 
 #. module: ayu_product_data
-#: model:ir.model.fields,field_description:ayu_product_data.field_res_config_settings__ayu_product_feed_interval_number
-msgid "Interval Number"
-msgstr "Intervall"
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_is_follower
+msgid "Is Follower"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_item_group
@@ -935,6 +1006,11 @@ msgid "Lines"
 msgstr "Linien"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ayu_product_data.tag_category,name:ayu_product_data.tag_category_material
 #: model:ir.model,name:ayu_product_data.model_ayu_product_data_material
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_material_id
@@ -966,9 +1042,24 @@ msgid "Materials"
 msgstr "Materialien"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.view_feed_form
 msgid "Model Field"
 msgstr "Datenmodell-Feld"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_age_group__name
@@ -997,6 +1088,26 @@ msgid "Name"
 msgstr ""
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.res_config_settings_view_form
 msgid "Next call"
 msgstr "Nächste Ausführung"
@@ -1016,6 +1127,26 @@ msgstr ""
 "ändern. Mit Vorsicht nutzen."
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_country_of_origin_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__ayu_country_of_origin_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_country_of_origin_id
@@ -1030,8 +1161,8 @@ msgstr "Optionen"
 
 #. module: ayu_product_data
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
-msgid "Origin Data Field"
-msgstr "Ursprungsdatenfeld"
+msgid "Origin"
+msgstr "Ursprung"
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_base_mixin__ayu_product_text_ids
@@ -1053,11 +1184,6 @@ msgstr "Google-Produktkategorie überschreiben"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_google_category__parent_id
 msgid "Parent Category"
 msgstr "Elternkategorie"
-
-#. module: ayu_product_data
-#: model:ir.model,name:ayu_product_data.model_product_template
-msgid "Product"
-msgstr "Produkt"
 
 #. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_product_category
@@ -1262,6 +1388,7 @@ msgid "Product Tags"
 msgstr "Produkt-Tags"
 
 #. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_template
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_doc_rel__product_template_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__product_template_id
 msgid "Product Template"
@@ -1329,6 +1456,11 @@ msgid "Product Texts"
 msgstr "Produkttexte"
 
 #. module: ayu_product_data
+#: model:ir.model,name:ayu_product_data.model_product_product
+msgid "Product Variant"
+msgstr "Produktvariante"
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__product_data_specification_help_url
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__product_data_specification_help_url
 msgid "Product data specification help URL"
@@ -1380,6 +1512,16 @@ msgid "Relationship between Tags and Products"
 msgstr "Verknüpfung zwischen Tags und Produkten"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_sale_report
 msgid "Sales Analysis Report"
 msgstr "Verkaufsanalysebericht"
@@ -1414,6 +1556,12 @@ msgid "Show On Detail Page"
 msgstr "Auf Detailseite anzeigen"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text_category__show_in_product_page
+#: model_terms:ir.ui.view,arch_db:ayu_product_data.view_product_text_categories_search
+msgid "Show in Product Page"
+msgstr "Auf Produktseite anzeigen"
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__source_data_id
 msgid "Source Data ID"
 msgstr "Datenursprungs-ID"
@@ -1427,6 +1575,15 @@ msgstr "Datenursprungs-Referenz"
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__source_data_model
 msgid "Source Model"
 msgstr "Datenursprungs-Modell"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_prod_tag_rel__tag_id
@@ -1561,6 +1718,7 @@ msgid "The name already exists for this category"
 msgstr "Der Name existiert bereits in dieser Kategorie"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_product_category__product_type_name
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_public_category__product_type_name
 msgid "The name in the Google product_type format, separated by '>'"
 msgstr "Der Name im Google product_type Format, getrennt mit '>'"
@@ -1598,6 +1756,11 @@ msgstr "Das Highlight existeriert bereits"
 #: model_terms:ir.ui.view,arch_db:ayu_product_data.product_template_form_view
 msgid "This will unassign the tag from this product. Are you sure?"
 msgstr "Das wird den Tag von diesem Produkt löschen. Sicher?"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ayu_product_data.age_group,description:ayu_product_data.age_group_adult
@@ -1673,9 +1836,19 @@ msgid "Website Color Product Templates"
 msgstr "Website Farb-Produktvorlagen"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_item_group__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ayu_product_data
 #: model:ir.model,name:ayu_product_data.model_product_public_category
 msgid "Website Product Category"
 msgstr "Website-Produktkategorie"
+
+#. module: ayu_product_data
+#: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_item_group__website_message_ids
+msgid "Website communication history"
+msgstr ""
 
 #. module: ayu_product_data
 #: model:ir.model.fields,help:ayu_product_data.field_ayu_product_data_color__html_color

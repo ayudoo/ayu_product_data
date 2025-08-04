@@ -71,7 +71,7 @@
         <t t-set="product_text" t-value="product.ayu_description_id"/>
       </t>
 
-      <t t-foreach="product.ayu_product_text_ids" t-as='product_text'>
+      <t t-foreach="product.ayu_product_text_ids" t-as='product_text' t-if="product_text.category_id.show_in_product_page">
         <t t-call="ayu_product_data.product_text">
           <t t-set="body_id" t-value="'product_text_{}'.format(product_text.id)"/>
         </t>

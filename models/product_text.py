@@ -18,6 +18,10 @@ class ProductTextCategory(models.Model):
         help="If the active field is set to false, it will allow you to hide"
         + " it without removing it.",
     )
+    show_in_product_page = fields.Boolean(
+        string="Show in Product Page",
+        default=True,
+    )
     name = fields.Char(required=True, string="Name", translate=True)
 
     def unlink(self):
