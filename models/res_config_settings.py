@@ -56,11 +56,11 @@ class ResConfigSettings(models.TransientModel):
     def _get_default_feed_export(self):
         export = self.env.ref("ayu_product_data.default_feed_export")
         if not export:
-            export = self.env["ir.export"].search(
+            export = self.env["ir.exports"].search(
                 [("name", "=", "Default Poduct Data Feed Export")], limit=1
             )
         if not export:
-            export = self.env["ir.export"].search([], limit=1)
+            export = self.env["ir.exports"].search([], limit=1)
         if not export:
             raise UserError(
                 "No export for the product variants found."
