@@ -1,6 +1,7 @@
-from odoo import _, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-from odoo.tools import html2plaintext,html_translate
+from odoo.tools import html2plaintext, html_translate
+# from odoo.addons.web_editor.models.ir_qweb_fields import html_to_text
 
 
 class ProductTextCategory(models.Model):
@@ -70,6 +71,17 @@ class ProductText(models.Model):
         sanitize_overridable=True,
         sanitize_attributes=False,
         sanitize_form=False,
+    )
+
+    @api.depends("content")
+    def _compute_content_plain_text(self):
+        for record in self:
+            record.content_plain_text = html2plaintext(record.content)
+            # record.content_plain_text = html_to_text(record.content)
+
+    content_plain_text = fields.Char(
+        "Content (Plain Text)",
+        compute=_compute_content_plain_text,
     )
     category_id = fields.Many2one(
         "ayu_product_data.product_text_category",

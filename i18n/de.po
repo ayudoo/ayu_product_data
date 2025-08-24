@@ -369,6 +369,11 @@ msgid "Content"
 msgstr "Inhalt"
 
 #. module: ayu_product_data
+#: model:ir.model.fields,field_description:ayu_product_data.field_ayu_product_data_product_text__content_plain_text
+msgid "Content (Plain Text)"
+msgstr "Inhalt (Einfacher Text)"
+
+#. module: ayu_product_data
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_product__ayu_contextual_currency_id
 #: model:ir.model.fields,field_description:ayu_product_data.field_product_template__ayu_contextual_currency_id
 msgid "Contextual Currency"
