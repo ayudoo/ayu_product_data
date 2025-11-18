@@ -1,4 +1,5 @@
 from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class ProductDetail(models.Model):
@@ -72,32 +73,34 @@ class ProductDetail(models.Model):
             | self.material_ids.product_template_ids
         )
 
-    def name_get(self):
-        result = []
-
+    @api.depends("section_name", "attribute_name", "attribute_value")
+    def _compute_display_name(self):
         for record in self:
             parts = [record.attribute_name, record.attribute_value]
             if record.section_name:
                 parts = [record.section_name] + parts
-
-            result.append((record.id, ":".join(parts)))
-        return result
+            record.display_name = ":".join(parts)
 
     @api.model
     def name_create(self, name):
-        attribute_name, attribute_value = name.rsplit(":", 1)
+        try:
+            attribute_name, attribute_value = name.split(":", 1)
+        except ValueError:
+            raise UserError("For quick create, please use this format, separated by colon: (<section name>:)<attribute name>:<attribute value>")
+
         if ":" in attribute_name:
             section_name, attribute_name = attribute_name.rsplit(":", 1)
         else:
             section_name = None
 
-        return self.create(
+        record = self.create(
             {
                 "section_name": section_name,
                 "attribute_name": attribute_name,
                 "attribute_value": attribute_value,
             }
-        ).name_get()[0]
+        )
+        return record.id, record.display_name
 
     def copy(self, default=None):
         default = dict(default or {})

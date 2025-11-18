@@ -232,7 +232,7 @@ class ProductTemplate(models.Model):
         "ayu_product_data.product_detail",
         string="Item Group Details",
         related="ayu_item_group_id.custom_detail_ids",
-        readonly=1,
+        readonly=True,
     )
 
     ayu_product_detail_ids = fields.Many2many(

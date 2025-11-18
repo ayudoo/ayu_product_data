@@ -121,12 +121,10 @@ class ProductTag(models.Model):
         string="Tag Assignments",
     )
 
-    def name_get(self):
-        result = []
+    @api.depends("name", "category_id")
+    def _compute_display_name(self):
         for record in self:
-            name = "{} ({})".format(record.name, record.category_id.name)
-            result.append((record.id, name))
-        return result
+            record.display_name = f"{record.name} {record.category_id.name}"
 
     @api.model
     def name_create(self, name):
@@ -136,12 +134,13 @@ class ProductTag(models.Model):
         else:
             category_id = False
 
-        return self.create(
+        record = self.create(
             {
                 "name": name,
                 "category_id": category_id,
             }
-        ).name_get()[0]
+        )
+        return record.id, record.display_name
 
     def _get_tag_rel_domain_by_category(self, domain_prefix=""):
         """Returns the domain to filter for

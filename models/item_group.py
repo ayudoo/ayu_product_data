@@ -147,25 +147,28 @@ class ItemGroup(models.Model):
         string="Product Highlights",
     )
 
-    def name_get(self):
-        return [(r.id, " ".join([r.identifier, r.name])) for r in self]
+    @api.depends("name", "identifier")
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = f"{record.identifier} {record.name}"
 
     @api.model
     def name_create(self, name):
-        if " " in name:
+        try:
             identifier, name = name.split(" ", 1)
-        else:
-            identifier = name
+        except ValueError:
+            raise UserError("For quick create, please use this format, separated by space: <identifier> <item group name>")
 
-        return self.create(
+        record = self.create(
             {
                 "identifier": identifier,
                 "name": name,
             }
-        ).name_get()[0]
+        )
+        return record.id, record.display_name
 
     def _name_search(
-        self, name, args=None, operator="ilike", limit=100, name_get_uid=None
+        self, name, args=None, operator="ilike", limit=100, name_get_uid=None, order=None,
     ):
         tail = False
         identifier = name.split(" ", 1)
@@ -185,7 +188,7 @@ class ItemGroup(models.Model):
         if args:
             domain = args + domain
 
-        return self._search(domain, limit=limit, access_rights_uid=name_get_uid)
+        return self._search(domain, limit=limit, access_rights_uid=name_get_uid, order=order)
 
     def _compute_website_color_pt_ids(self):
         Product = self.env["product.template"]

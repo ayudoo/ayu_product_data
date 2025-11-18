@@ -6,13 +6,13 @@
     <field name="model">product.template</field>
     <field name="inherit_id" ref="product.product_template_form_view"/>
     <field name="arch" type="xml">
-      <field name="categ_id" position='attributes'>
-        <attribute name="attrs">{'readonly': [('ig_has_categ_id','=',True)]}</attribute>
+      <field name="categ_id" position="attributes">
+        <attribute name="readonly">ig_has_categ_id</attribute>
       </field>
-      <field name="public_categ_ids" position='attributes'>
-        <attribute name="attrs">{'readonly': [('ig_has_public_categ_ids','=',True)]}</attribute>
+      <field name="public_categ_ids" position="attributes">
+        <attribute name="readonly">ig_has_public_categ_ids</attribute>
       </field>
-      <page name='general_information' position='after'>
+      <page name="general_information" position="after">
         <page name="ayu_product_data" string="Product Data">
           <div class="text-muted">For more information, see
             <field
@@ -36,26 +36,24 @@
             <field name="ig_has_ayu_product_highlight_ids" invisible="1"/>
 
             <group name="product_data_specs" string="General">
-              <field name="ayu_line_id" attrs="{'readonly': [('ig_has_ayu_line_id','=',True)]}"/>
-              <field name="ayu_item_group_id" attrs="{'readonly': [('can_edit_product_data','=',False)]}"/>
-              <field name="ayu_color_id" attrs="{'readonly': [('ig_has_ayu_color_id','=',True)]}"/>
-              <field
-                name="ayu_material_id"
-                attrs="{'readonly': [('ig_has_ayu_material_id','=',True)]}"/>
+              <field name="ayu_line_id" readonly="ig_has_ayu_line_id"/>
+              <field name="ayu_item_group_id" readonly="not can_edit_product_data"/>
+              <field name="ayu_color_id" readonly="ig_has_ayu_color_id"/>
+              <field name="ayu_material_id" readonly="ig_has_ayu_material_id"/>
               <field
                 name="ayu_condition_id"
-                attrs="{'readonly': [('ig_has_ayu_condition_id','=',True)]}"
+                readonly="ig_has_ayu_condition_id"
                 options="{'no_create': True, 'no_create_edit':True}"/>
             </group>
             <group name="product_data_audience" string="Audience / Categories">
               <field
                 name="ayu_gender_id"
                 options="{'no_create': True, 'no_create_edit':True}"
-                attrs="{'readonly': [('ig_has_ayu_gender_id','=',True)]}"/>
+                readonly="ig_has_ayu_gender_id"/>
               <field
                 name="ayu_age_group_id"
                 options="{'no_create': True, 'no_create_edit':True}"
-                attrs="{'readonly': [('ig_has_ayu_age_group_id','=',True)]}"/>
+                readonly="ig_has_ayu_age_group_id"/>
               <!-- <div colspan="2">
                 <div class="font-weight-bold">
                   <label
@@ -74,9 +72,9 @@
                 </div>
                 <field
                   name="ayu_google_category_id"
-                  nolabel='1'
+                  nolabel="1"
                   options="{'no_create': True, 'no_create_edit':True}"
-                  attrs="{'readonly': [('ig_has_ayu_google_category_id','=',True)]}"/>
+                  readonly="ig_has_ayu_google_category_id"/>
               </div>
             </group>
           </group>
@@ -85,28 +83,28 @@
               name="ayu_description_id"
               string="Description"
               options="{'no_create': True}"
-              attrs="{'readonly': [('ig_has_ayu_description_id','=',True)]}"/>
+              readonly="ig_has_ayu_description_id"/>
             <field
               name="ayu_product_text_ids"
               widget="many2many_tags"
               options="{'no_create': True}"
-              attrs="{'readonly': [('ig_has_ayu_product_text_ids','=',True)]}"/>
+              readonly="ig_has_ayu_product_text_ids"/>
             <label for="ayu_custom_product_detail_ids"/>
             <div class="full_badge">
               <field
-                attrs="{'invisible': [('ayu_implied_product_detail_ids','=',False)]}"
+                invisible="not ayu_implied_product_detail_ids"
                 name="ayu_implied_product_detail_ids"
                 widget="many2many_tags"/>
               <field
                 name="ayu_custom_product_detail_ids"
                 widget="many2many_tags"
                 domain="[('id','not in',ayu_implied_product_detail_ids)]"
-                attrs="{'readonly': [('can_edit_product_data','=',False)]}"/>
+                readonly="not can_edit_product_data"/>
             </div>
             <field
               name="ayu_product_highlight_ids"
               widget="many2many_tags"
-              attrs="{'readonly': [('ig_has_ayu_product_highlight_ids','=',True)]}"/>
+              readonly="ig_has_ayu_product_highlight_ids"/>
           </group>
           <group name="product_data_website" string="Shop">
             <group name="product_related_documents" colspan="2">
@@ -117,7 +115,7 @@
                     string="Related Documents"
                     class="font-weight-bold"/>
                 </div>
-                <field name="ayu_prod_doc_rel_ids" attrs="{'readonly': [('can_edit_product_data','=',False)]}">
+                <field name="ayu_prod_doc_rel_ids" readonly="not can_edit_product_data">
                   <form>
                     <group>
                       <field name="user_document_id" string="Document"/>
@@ -142,24 +140,17 @@
                 <div>
                   <label for="ayu_tag_rel_ids" string="Tags" class="font-weight-bold"/>
                 </div>
-                <field name="ayu_tag_rel_ids" attrs="{'readonly': [('can_edit_product_data','=',False)]}">
+                <field name="ayu_tag_rel_ids" readonly="not can_edit_product_data">
                   <tree editable="bottom" delete="false">
-                    <field
-                      name="tag_id"
-                      string="Name"
-                      attrs="{'readonly': [('source_data_ref','!=',False)]}"/>
-                    <field
-                      name="source_data_ref"
-                      widget="reference"
-                      string="Origin"
-                      readonly="1"/>
+                    <field name="tag_id" string="Name" readonly="source_data_ref"/>
+                    <field name="source_data_ref" widget="reference" string="Origin" readonly="1"/>
                     <button
                       name="unlink"
                       class="fa fa-trash-o oe_read_only"
                       type="object"
                       aria-label="Delete"
                       confirm="This will unassign the tag from this product. Are you sure?"
-                      attrs="{'invisible': [('source_data_ref','!=',False)]}"/>
+                      invisible="source_data_ref"/>
                   </tree>
                 </field>
               </div>
@@ -173,13 +164,13 @@
   <record id="product_template_hs_code" model="ir.ui.view">
     <field name="name">product.template.form.hs_code.product_data</field>
     <field name="model">product.template</field>
-    <field name="inherit_id" ref="delivery.product_template_hs_code"/>
+    <field name="inherit_id" ref="stock_delivery.product_template_hs_code"/>
     <field name="arch" type="xml">
       <xpath expr="//group[@name='group_lots_and_weight']" position="inside">
         <field name="ig_has_country_of_origin" invisible="1"/>
       </xpath>
-      <field name="country_of_origin" position='attributes'>
-        <attribute name="attrs">{'readonly': [('ig_has_country_of_origin','=',True)]}</attribute>
+      <field name="country_of_origin" position="attributes">
+        <attribute name="readonly">ig_has_country_of_origin</attribute>
       </field>
     </field>
   </record>

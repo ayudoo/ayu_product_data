@@ -43,19 +43,13 @@ class GoogleProductCategory(models.Model):
         string="Product Templates",
     )
 
-    def name_get(self):
-        result = []
+    @api.depends("name", "parent_id")
+    def _compute_display_name(self):
         for record in self:
             if record.parent_id:
-                result.append(
-                    (
-                        record.id,
-                        " > ".join([record.parent_id.name_get()[0][1], record.name]),
-                    )
-                )
+                record.display_name = f"{record.parent_id.display_name} {record.name}"
             else:
-                result.append((record.id, record.name))
-        return result
+                record.display_name = record.name
 
     @api.model
     def _init_google_categories(self):

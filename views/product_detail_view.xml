@@ -23,11 +23,7 @@
           <sheet>
             <div class="oe_button_box" name="button_box"/>
             <field name="active" invisible="1"/>
-            <widget
-              name="web_ribbon"
-              title="Archived"
-              bg_product_detail="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+            <widget name="web_ribbon" title="Archived" bg_product_detail="bg-danger" invisible="active"/>
             <group>
               <group>
                 <field name="section_name"/>
@@ -44,10 +40,7 @@
               </group>
             </group>
             <notebook>
-              <page
-                attrs="{'invisible': [('item_group_ids','=',[])]}"
-                name="item_groups"
-                string="Item Groups">
+              <page invisible="not item_group_ids" name="item_groups" string="Item Groups">
                 <field name="item_group_ids" limit="10">
                   <tree>
                     <field name="display_name" string="Name"/>
@@ -61,7 +54,7 @@
                 </field>
               </page>
               <page
-                attrs="{'invisible': [('product_template_ids','=',[])]}"
+                invisible="not product_template_ids"
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids" limit="10">
@@ -78,27 +71,21 @@
                   </tree>
                 </field>
               </page>
-              <page attrs="{'invisible': [('line_ids','=',[])]}" name="product_lines" string="Lines">
+              <page invisible="not line_ids" name="product_lines" string="Lines">
                 <field name="line_ids" limit="10">
                   <tree>
                     <field name="display_name" string="Line Name"/>
                   </tree>
                 </field>
               </page>
-              <page
-                attrs="{'invisible': [('color_ids','=',[])]}"
-                name="product_colors"
-                string="Colors">
+              <page invisible="not color_ids" name="product_colors" string="Colors">
                 <field name="color_ids" limit="10">
                   <tree>
                     <field name="display_name" string="Color Name"/>
                   </tree>
                 </field>
               </page>
-              <page
-                attrs="{'invisible': [('material_ids','=',[])]}"
-                name="product_materials"
-                string="Materials">
+              <page invisible="not material_ids" name="product_materials" string="Materials">
                 <field name="material_ids" limit="10">
                   <tree>
                     <field name="display_name" string="Material Name"/>
@@ -114,7 +101,6 @@
     <record id="view_product_detail_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.product_detail.tree</field>
       <field name="model">ayu_product_data.product_detail</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Product Details">
           <field name="section_name"/>

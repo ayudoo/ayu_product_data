@@ -25,7 +25,7 @@ Features:
         "website_sale_stock",
         # absolutely not happy with this dependency, but to incorporate
         # country_of_origin, we have to.
-        "delivery",
+        "stock_delivery",
     ],
     "data": [
         "security/ir.model.access.csv",

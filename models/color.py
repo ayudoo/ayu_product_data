@@ -1,4 +1,5 @@
 from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 COLOR_IMAGE_SIZE = (30, 30)
 
@@ -8,6 +9,7 @@ class Color(models.Model):
     _name = "ayu_product_data.color"
     _description = "Color"
     _order = "sequence, identifier"
+    # _rec_name = "display_name"
 
     _sql_constraints = [
         ("unique_identifier", "UNIQUE(identifier)", "The identifier already exists"),
@@ -66,21 +68,28 @@ class Color(models.Model):
     def get_product_details(self):
         return self.detail_ids
 
-    def name_get(self):
-        return [(r.id, " ".join([r.identifier or "", r.name])) for r in self]
+    @api.depends("name", "identifier")
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = f"{record.identifier} {record.name}"
 
     @api.model
     def name_create(self, name):
-        identifier, name = name.split(" ", 1)
-        return self.create(
+        try:
+            identifier, name = name.split(" ", 1)
+        except ValueError:
+            raise UserError("For quick create, please use this format, separated by space: <identifier> <color name>")
+
+        record = self.create(
             {
                 "identifier": identifier,
                 "name": name,
             }
-        ).name_get()[0]
+        )
+        return record.id, record.display_name
 
     def _name_search(
-        self, name, args=None, operator="ilike", limit=100, name_get_uid=None
+        self, name, args=None, operator="ilike", limit=100, name_get_uid=None, order=None,
     ):
         tail = False
         identifier = name.split(" ", 1)
@@ -100,7 +109,7 @@ class Color(models.Model):
         if args:
             domain = args + domain
 
-        return self._search(domain, limit=limit, access_rights_uid=name_get_uid)
+        return self._search(domain, limit=limit, access_rights_uid=name_get_uid, order=order)
 
     def copy(self, default=None):
         default = dict(default or {})

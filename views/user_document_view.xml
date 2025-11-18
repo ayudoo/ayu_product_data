@@ -17,8 +17,7 @@
               string="Language"
               name="group_by_language"
               domain="[]"
-              context="{'group_by': 'language_id'}"
-            />
+              context="{'group_by': 'language_id'}"/>
           </group>
         </search>
       </field>
@@ -36,7 +35,7 @@
               name="web_ribbon"
               title="Archived"
               bg_user_document="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+              invisible="active"/>
             <group>
               <group>
                 <field name="name"/>
@@ -53,7 +52,6 @@
     <record id="view_user_document_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.user_document.tree</field>
       <field name="model">ayu_product_data.user_document</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="User Documents">
           <field name="name"/>

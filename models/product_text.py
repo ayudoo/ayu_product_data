@@ -110,12 +110,11 @@ class ProductText(models.Model):
         else:
             return self.product_template_ids
 
-    def name_get(self):
-        result = []
+    @api.depends("category_id", "identifier", "content")
+    def _compute_display_name(self):
         description_category = self.env.ref(
             "ayu_product_data.product_text_category_description"
         )
-
         for record in self:
             content = html2plaintext(record.content).replace("\n", " ")
             if record.category_id == description_category:
@@ -125,8 +124,7 @@ class ProductText(models.Model):
                 name = " ".join([record.category_id.name, record.identifier])
                 content = content[:50]
 
-            result.append((record.id, " ".join([name, content])))
-        return result
+            record.display_name = " ".join([name, content])
 
     def copy(self, default=None):
         default = dict(default or {})

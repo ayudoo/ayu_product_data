@@ -5,7 +5,7 @@
     <field name="model">sale.report</field>
     <field name="inherit_id" ref="sale.view_order_product_search"/>
     <field name="arch" type="xml">
-      <filter name="Product" position="before">
+      <filter name="product_tmpl_id" position="before">
         <filter
           string="Item Group"
           name="item_group"

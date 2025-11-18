@@ -22,11 +22,7 @@
           <sheet>
             <div class="oe_button_box" name="button_box"/>
             <field name="active" invisible="1"/>
-            <widget
-              name="web_ribbon"
-              title="Archived"
-              bg_color="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
             <group>
               <group>
                 <field name="identifier"/>
@@ -52,16 +48,16 @@
                       <div style="font-weight: bold;">
                         <label
                           for="public_categ_ids"
-                          string='eCommerce Category / Product Type'
+                          string="eCommerce Category / Product Type"
                           style="font-weight: bold; margin: 0px;"/>:
                       </div>
-                      <field name="public_categ_ids" widget="many2many_tags" nolabel='1'/>
+                      <field name="public_categ_ids" widget="many2many_tags" nolabel="1"/>
                       <div style="font-weight: bold;">
                         <label for="ayu_google_category_id" style="font-weight: bold; margin: 0px;"/>:
                       </div>
                       <field
                         name="ayu_google_category_id"
-                        nolabel='1'
+                        nolabel="1"
                         options="{'no_create': True, 'no_create_edit':True}"/>
                     </div>
                   </group>
@@ -77,7 +73,7 @@
                     <label for="custom_detail_ids"/>
                     <div class="full_badge">
                       <field
-                        attrs="{'invisible': [('implied_detail_ids','in',[None,False])]}"
+                        invisible="implied_detail_ids in [None, False]"
                         name="implied_detail_ids"
                         widget="many2many_tags"/>
                       <field
@@ -98,7 +94,7 @@
                 </group>
               </page>
               <page
-                attrs="{'invisible': [('product_template_ids','=',[])]}"
+                invisible="not product_template_ids"
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids">
@@ -129,7 +125,6 @@
     <record id="view_item_group_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.item_group.tree</field>
       <field name="model">ayu_product_data.item_group</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Item Group">
           <field name="identifier"/>

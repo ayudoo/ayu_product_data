@@ -25,7 +25,7 @@
               name="web_ribbon"
               title="Archived"
               bg_tag_category="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+              invisible="active"/>
             <div class="oe_title">
               <label for="name" class="oe_edit_only" string="Category Name"/>
               <h1>
@@ -38,9 +38,7 @@
               </group>
             </group>
             <notebook>
-              <page
-                name="tags"
-                string="Tags">
+              <page name="tags" string="Tags">
                 <field name="tag_ids">
                   <tree>
                     <field name="name"/>
@@ -58,7 +56,6 @@
     <record id="view_tag_category_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.tag_category.tree</field>
       <field name="model">ayu_product_data.tag_category</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Product Tag Category">
           <field name="sequence" widget="handle"/>

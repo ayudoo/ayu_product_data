@@ -10,11 +10,7 @@
           <sheet>
             <div class="oe_button_box" name="button_box"/>
             <field name="active" invisible="1"/>
-            <widget
-              name="web_ribbon"
-              title="Archived"
-              bg_color="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
             <group>
               <group>
                 <field name="website_id"/>
@@ -32,8 +28,7 @@
                     type="object"
                     class="oe_link p-0"
                     icon="fa-refresh"
-                    colspan="2"
-                  >Refresh feed export files.</button>
+                    colspan="2">Refresh feed export files.</button>
                   <div
                     colspan="2"
                     class="text-muted pb-3">The files are served under '/shop/feed/{filename}'</div>
@@ -41,7 +36,7 @@
                 <field name="attachment_ids">
                   <tree>
                     <field name="name" invisible="1"/>
-                    <field string="Name" name="datas" filename="name" widget='binary'/>
+                    <field string="Name" name="datas" filename="name" widget="binary"/>
                     <field name="file_size"/>
                     <field name="create_uid"/>
                     <field name="create_date"/>
@@ -54,11 +49,7 @@
                     <label for="export_id"/>
                     <div class="o_row">
                       <field name="export_id" string="Export Template" options="{'no_open': True, 'no_create': True}" class="oe_inline"/>
-                      <button
-                        name="open_product_product"
-                        type="object"
-                        class="oe_link"
-                      >
+                      <button name="open_product_product" type="object" class="oe_link">
                         <span class="fa fa-external-link" title="Open Products View"> Open products to configure exports</span>
                       </button>
                     </div>

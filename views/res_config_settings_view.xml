@@ -7,7 +7,7 @@
     <field name="priority" eval="20"/>
     <field name="inherit_id" ref="website_sale.res_config_settings_view_form"/>
     <field name="arch" type="xml">
-      <div id="sale_product_catalog_settings" position="after">
+      <block id="sale_product_catalog_settings" position="after">
         <h2>Product Data</h2>
         <div class="row mt16 o_settings_container" id="ayu_product_data_settings">
           <div class="col-12 col-lg-6 o_setting_box">
@@ -29,19 +29,19 @@
                     icon="fa-arrow-right"/>
                 </div>
               </div>
-              <div class="row mt8" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+              <div class="row mt8" invisible="not ayu_product_feed_activation">
                 <label for="ayu_product_feed_interval_number" string="Refresh every" class="col-lg-4 o_light_label"/>
-                <field name="ayu_product_feed_interval_number" class='oe_inline' style='width: 50px !important;'/>
-                <field name="ayu_product_feed_interval_type" class='oe_inline'/>
+                <field name="ayu_product_feed_interval_number" class="oe_inline" style="width: 50px !important;"/>
+                <field name="ayu_product_feed_interval_type" class="oe_inline"/>
               </div>
-              <div class="row" attrs="{'invisible': [('ayu_product_feed_activation', '=', False)]}">
+              <div class="row" invisible="not ayu_product_feed_activation">
                 <label for="ayu_product_feed_nextcall" string="Next call" class="col-lg-4 o_light_label"/>
                 <field name="ayu_product_feed_nextcall"/>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </block>
     </field>
   </record>
 

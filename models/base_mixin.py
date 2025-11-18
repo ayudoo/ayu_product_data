@@ -69,7 +69,7 @@ class BaseMixin(models.AbstractModel):
                 self.env.ref("ayu_product_data.product_text_category_description").id,
             ),
         ],
-        context="{'product_text_description': True}",
+        context={'product_text_description': True},
     )
 
     ayu_product_text_ids = fields.Many2many(

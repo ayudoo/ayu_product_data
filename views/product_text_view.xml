@@ -27,7 +27,7 @@
               name="web_ribbon"
               title="Archived"
               bg_product_text="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+              invisible="active"/>
             <group>
               <group>
                 <field name="identifier"/>
@@ -49,7 +49,6 @@
     <record id="view_product_text_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.product_text.tree</field>
       <field name="model">ayu_product_data.product_text</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Product Texts">
           <field name="category_id"/>

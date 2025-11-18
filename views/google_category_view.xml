@@ -21,11 +21,7 @@
           <sheet>
             <div class="oe_button_box" name="button_box"/>
             <field name="active" invisible="1"/>
-            <widget
-              name="web_ribbon"
-              title="Archived"
-              bg_color="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+            <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
             <group>
               <group>
                 <field name="identifier"/>
@@ -40,10 +36,7 @@
               </group>
             </group>
             <notebook>
-              <page
-                attrs="{'invisible': [('item_group_ids','=',[])]}"
-                name="item_groups"
-                string="Item Groups">
+              <page invisible="not item_group_ids" name="item_groups" string="Item Groups">
                 <field name="item_group_ids" limit="10">
                   <tree>
                     <field name="display_name" string="Name"/>
@@ -57,7 +50,7 @@
                 </field>
               </page>
               <page
-                attrs="{'invisible': [('product_template_ids','=',[])]}"
+                invisible="not product_template_ids"
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids" limit="10">
@@ -83,7 +76,6 @@
     <record id="view_google_category_tree" model="ir.ui.view">
       <field name="name">ayu_product_data.google_category.tree</field>
       <field name="model">ayu_product_data.google_category</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Google Product Category">
           <field name="identifier"/>
