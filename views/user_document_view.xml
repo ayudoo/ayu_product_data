@@ -53,11 +53,11 @@
       <field name="name">ayu_product_data.user_document.tree</field>
       <field name="model">ayu_product_data.user_document</field>
       <field name="arch" type="xml">
-        <tree string="User Documents">
+        <list string="User Documents">
           <field name="name"/>
           <field name="language_id"/>
           <field name="description_plain" string="Description"/>
-        </tree>
+        </list>
       </field>
     </record>
 

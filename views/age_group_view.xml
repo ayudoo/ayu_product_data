@@ -38,14 +38,14 @@
             <notebook>
               <page invisible="not item_group_ids" name="item_groups" string="Item Groups">
                 <field name="item_group_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Name"/>
                     <field name="ayu_line_id"/>
                     <field name="ayu_color_id"/>
                     <field name="ayu_material_id"/>
                     <field name="ayu_condition_id"/>
                     <field name="ayu_gender_id"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page
@@ -53,7 +53,7 @@
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Product Name"/>
                     <field name="default_code"/>
                     <field name="ayu_line_id"/>
@@ -62,7 +62,7 @@
                     <field name="ayu_material_id"/>
                     <field name="ayu_condition_id"/>
                     <field name="ayu_gender_id"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
             </notebook>
@@ -75,10 +75,10 @@
       <field name="name">ayu_product_data.age_group.tree</field>
       <field name="model">ayu_product_data.age_group</field>
       <field name="arch" type="xml">
-        <tree string="Age Group">
+        <list string="Age Group">
           <field name="sequence" widget="handle"/>
           <field name="name"/>
-        </tree>
+        </list>
       </field>
     </record>
 

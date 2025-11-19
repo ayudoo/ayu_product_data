@@ -44,9 +44,9 @@
       <field name="name">ayu_product_data.product_highlight.tree</field>
       <field name="model">ayu_product_data.product_highlight</field>
       <field name="arch" type="xml">
-        <tree string="Product Highlights">
+        <list string="Product Highlights">
           <field name="name"/>
-        </tree>
+        </list>
       </field>
     </record>
 

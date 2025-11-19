@@ -166,7 +166,7 @@ class Feed(models.Model):
             "type": "ir.actions.act_window",
             "res_model": "product.product",
             "target": "current",
-            "view_mode": "tree",
+            "view_mode": "list",
         }
 
         return action

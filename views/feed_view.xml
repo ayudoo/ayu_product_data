@@ -34,13 +34,13 @@
                     class="text-muted pb-3">The files are served under '/shop/feed/{filename}'</div>
                 </group>
                 <field name="attachment_ids">
-                  <tree>
+                  <list>
                     <field name="name" invisible="1"/>
                     <field string="Name" name="datas" filename="name" widget="binary"/>
                     <field name="file_size"/>
                     <field name="create_uid"/>
                     <field name="create_date"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page name="export_fields" string="Fields">
@@ -57,10 +57,10 @@
                 </group>
                 <div class="text-muted">Note, that modifying the fields will also modify the selected export. Proceed with caution.</div>
                 <field name="export_fields">
-                  <tree editable="1">
+                  <list editable="bottom">
                     <field name="name" string="Model Field"/>
                     <field name="ayu_data_export_label"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
             </notebook>
@@ -73,11 +73,11 @@
       <field name="name">ayu_product_data.feed.tree</field>
       <field name="model">ayu_product_data.feed</field>
       <field name="arch" type="xml">
-        <tree string="Feed">
+        <list string="Feed">
           <field name="name"/>
           <field name="context_user_id"/>
           <field name="export_id"/>
-        </tree>
+        </list>
       </field>
     </record>
 

@@ -98,7 +98,7 @@
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Product Name"/>
                     <field name="default_code"/>
                     <field name="ayu_line_id"/>
@@ -108,16 +108,12 @@
                     <field name="ayu_gender_id"/>
                     <field name="ayu_age_group_id"/>
                     <field name="website_published" string="Published" widget="boolean_toggle"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
             </notebook>
           </sheet>
-          <div class="oe_chatter">
-            <field name="message_follower_ids"/>
-            <field name="activity_ids"/>
-            <field name="message_ids"/>
-          </div>
+          <chatter/>
         </form>
       </field>
     </record>
@@ -126,10 +122,10 @@
       <field name="name">ayu_product_data.item_group.tree</field>
       <field name="model">ayu_product_data.item_group</field>
       <field name="arch" type="xml">
-        <tree string="Item Group">
+        <list string="Item Group">
           <field name="identifier"/>
           <field name="name"/>
-        </tree>
+        </list>
       </field>
     </record>
 

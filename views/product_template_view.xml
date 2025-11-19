@@ -126,12 +126,12 @@
                       <field class="td_ayu_description" name="description" string="Description"/>
                     </group>
                   </form>
-                  <tree editable="bottom">
+                  <list editable="bottom">
                     <field name="user_document_id" string="Document"/>
                     <field name="language_id"/>
                     <field name="description_plain" string="Description"/>
                     <field name="website_active" widget="boolean_toggle" string="Active"/>
-                  </tree>
+                  </list>
                 </field>
               </div>
             </group>
@@ -141,7 +141,7 @@
                   <label for="ayu_tag_rel_ids" string="Tags" class="font-weight-bold"/>
                 </div>
                 <field name="ayu_tag_rel_ids" readonly="not can_edit_product_data">
-                  <tree editable="bottom" delete="false">
+                  <list editable="bottom" delete="false">
                     <field name="tag_id" string="Name" readonly="source_data_ref"/>
                     <field name="source_data_ref" widget="reference" string="Origin" readonly="1"/>
                     <button
@@ -151,7 +151,7 @@
                       aria-label="Delete"
                       confirm="This will unassign the tag from this product. Are you sure?"
                       invisible="source_data_ref"/>
-                  </tree>
+                  </list>
                 </field>
               </div>
             </group>

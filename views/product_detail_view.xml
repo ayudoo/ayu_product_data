@@ -42,7 +42,7 @@
             <notebook>
               <page invisible="not item_group_ids" name="item_groups" string="Item Groups">
                 <field name="item_group_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Name"/>
                     <field name="ayu_line_id"/>
                     <field name="ayu_color_id"/>
@@ -50,7 +50,7 @@
                     <field name="ayu_condition_id"/>
                     <field name="ayu_gender_id"/>
                     <field name="ayu_age_group_id"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page
@@ -58,7 +58,7 @@
                 name="product_templates"
                 string="Product Templates">
                 <field name="product_template_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Product Name"/>
                     <field name="default_code"/>
                     <field name="ayu_line_id"/>
@@ -68,28 +68,28 @@
                     <field name="ayu_condition_id"/>
                     <field name="ayu_gender_id"/>
                     <field name="ayu_age_group_id"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page invisible="not line_ids" name="product_lines" string="Lines">
                 <field name="line_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Line Name"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page invisible="not color_ids" name="product_colors" string="Colors">
                 <field name="color_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Color Name"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
               <page invisible="not material_ids" name="product_materials" string="Materials">
                 <field name="material_ids" limit="10">
-                  <tree>
+                  <list>
                     <field name="display_name" string="Material Name"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
             </notebook>
@@ -102,11 +102,11 @@
       <field name="name">ayu_product_data.product_detail.tree</field>
       <field name="model">ayu_product_data.product_detail</field>
       <field name="arch" type="xml">
-        <tree string="Product Details">
+        <list string="Product Details">
           <field name="section_name"/>
           <field name="attribute_name"/>
           <field name="attribute_value"/>
-        </tree>
+        </list>
       </field>
     </record>
 

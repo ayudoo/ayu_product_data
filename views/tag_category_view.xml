@@ -40,11 +40,11 @@
             <notebook>
               <page name="tags" string="Tags">
                 <field name="tag_ids">
-                  <tree>
+                  <list>
                     <field name="name"/>
                     <field name="use_as_filter"/>
                     <field name="show_on_detail_page"/>
-                  </tree>
+                  </list>
                 </field>
               </page>
             </notebook>
@@ -57,10 +57,10 @@
       <field name="name">ayu_product_data.tag_category.tree</field>
       <field name="model">ayu_product_data.tag_category</field>
       <field name="arch" type="xml">
-        <tree string="Product Tag Category">
+        <list string="Product Tag Category">
           <field name="sequence" widget="handle"/>
           <field name="name"/>
-        </tree>
+        </list>
       </field>
     </record>
 

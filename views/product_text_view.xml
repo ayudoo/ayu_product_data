@@ -50,11 +50,11 @@
       <field name="name">ayu_product_data.product_text.tree</field>
       <field name="model">ayu_product_data.product_text</field>
       <field name="arch" type="xml">
-        <tree string="Product Texts">
+        <list string="Product Texts">
           <field name="category_id"/>
           <field name="identifier"/>
           <field name="content"/>
-        </tree>
+        </list>
       </field>
     </record>
 
