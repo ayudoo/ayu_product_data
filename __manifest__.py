@@ -28,6 +28,7 @@ Features:
         "stock_delivery",
     ],
     "data": [
+        "security/product_data_security.xml",
         "security/ir.model.access.csv",
         "data/product_text_data.xml",
         "data/age_group_data.xml",

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+
+    <record id="group_read_product_data" model="res.groups">
+      <field name="name">Can read Product Data</field>
+      <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <record id="base.group_public" model="res.groups">
+      <field name="implied_ids" eval="[(4, ref('ayu_product_data.group_read_product_data'))]"/>
+    </record>
+
+    <record id="base.group_portal" model="res.groups">
+      <field name="implied_ids" eval="[(4, ref('ayu_product_data.group_read_product_data'))]"/>
+    </record>
+
+  </data>
+</odoo>
