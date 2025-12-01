@@ -66,7 +66,7 @@ Features:
         ],
         "web.assets_frontend": [
             "ayu_product_data/static/src/scss/frontend.scss",
-            "ayu_product_data/static/src/js/product_color_select.js",
+            # "ayu_product_data/static/src/js/product_color_select.js",
         ],
     },
     "application": True,
