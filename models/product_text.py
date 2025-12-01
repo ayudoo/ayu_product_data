@@ -116,15 +116,24 @@ class ProductText(models.Model):
             "ayu_product_data.product_text_category_description"
         )
         for record in self:
-            content = html2plaintext(record.content).replace("\n", " ")
-            if record.category_id == description_category:
+            if record.content:
+                content = html2plaintext(record.content).replace("\n", " ")
+                if record.category_id == description_category:
+                    name = record.identifier
+                    content = content[:200]
+                else:
+                    if record.category_id:
+                        name = f"{record.category_id.name} {record.identifier}"
+                    else:
+                        name = record.identifier
+                    content = content[:50]
+                name = f"{name} {content}"
+            elif record.identifier:
                 name = record.identifier
-                content = content[:200]
             else:
-                name = " ".join([record.category_id.name, record.identifier])
-                content = content[:50]
+                name = "New"
 
-            record.display_name = " ".join([name, content])
+            record.display_name = name
 
     def copy(self, default=None):
         default = dict(default or {})

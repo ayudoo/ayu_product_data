@@ -76,7 +76,10 @@ class ProductDetail(models.Model):
     @api.depends("section_name", "attribute_name", "attribute_value")
     def _compute_display_name(self):
         for record in self:
-            parts = [record.attribute_name, record.attribute_value]
+            parts = [
+                part for part in [record.attribute_name, record.attribute_value]
+                if part
+            ]
             if record.section_name:
                 parts = [record.section_name] + parts
             record.display_name = ":".join(parts)
